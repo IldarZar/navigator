@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="selectPlace.css">
+
+
+    <link rel="stylesheet" href="jquery-ui-1.13.0/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+    <header class="page-header">
+        <div class="page-header__logo">
+            <img src="img/navigator-logo.png">
+        </div>
+        <nav class="page-header__nav">
+            <div class="page-nav__element">
+                <span class="page-nav__element-span">
+                    О компании
+                </span> 
+                <div class="page-nav__element-down-arrow down-arrow">
+                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.83333 0.166626L10 1.33329L5 6.33329L-5.09966e-08 1.33329L1.16667 0.166626L5 3.99996L8.83333 0.166626Z" fill="#675A54">
+                        </path>
+                    </svg>
+                </div>
+                <div class="page-header__about-company-menu-wrapper dropdown-menu-wrapper">
+                    <ul class="page-header__about-company-menu dropdown-menu">
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Компания</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Новости</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Истории жителей</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Полезные статьи</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Тендеры</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Вакансии</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="page-nav__element">
+                <span class="page-nav__element-span">
+                    Коттеджные поселки
+                </span> 
+                <div class="page-nav__element-down-arrow down-arrow">
+                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.83333 0.166626L10 1.33329L5 6.33329L-5.09966e-08 1.33329L1.16667 0.166626L5 3.99996L8.83333 0.166626Z" fill="#675A54">
+                        </path>
+                    </svg>
+                </div>
+                <div class="page-header__cottage-settlements-menu-wrapper dropdown-menu-wrapper">
+                    <ul class="page-header__cottage-settlements-menu dropdown-menu">
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Альпийская долина</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Есенино</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Ёлки</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="./selectPlace.html">Выбрать участок</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-nav__element">
+                <span class="page-nav__element-span">
+                    Покупателям
+                </span> 
+                <div class="down-arrow">
+                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.83333 0.166626L10 1.33329L5 6.33329L-5.09966e-08 1.33329L1.16667 0.166626L5 3.99996L8.83333 0.166626Z" fill="#675A54">
+                        </path>
+                    </svg>
+                </div>
+                <div class="page-header__buyers-menu-wrapper dropdown-menu-wrapper">
+                    <ul class="page-header__buyers-menu dropdown-menu">
+                        <!-- переделать в пиксели left -->
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Рассрочка</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Ипотека</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Цены</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Лояльный покупатель</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-nav__element">
+                Обслуживающая компания
+            </div>
+            <div class="page-nav__element">
+                Таунхаусы
+            </div>
+        </nav>
+        <a class="page-header__phone">
+            +7 3452
+            <p>565-455</p>
+        </a>
+        <button class="page-header__call green-button">
+            Заказать звонок
+        </button>
+        <button class="page-header__menu">
+            <img src="./img/mobile-menu-icon.png" alt="">
+        </button>
+    </header>
+
+    <div class="navigation-chain-wrapper">
+        <div class="navigation-chain">
+            Главная > Коттеджные поселки > Выбрать участок
+        </div>
+    </div>
+
+    <section class="select-place">
+        <div class="select-place__form-heading-wrapper">
+
+            <h2 class="select-place__form-heading">
+                Выберите свой участок
+            </h2>
+        </div>
+        <div class="select-palce__form-wrapper">
+            <form class="select-place__form" action="#">
+                <div class="form__elements">
+                    <div class="select-place__cost">
+                        <h4 class="select-place__cost-heading">
+                            Стоимость
+                        </h4>
+                        <div id="slider" class="select-place__cost-slider">
+                            
+                        </div>
+                        <div class="slider-values">
+                            <span class="select-place__cost-left-number">0 ₽</span>
+                            <span class="select-place__cost-right-number">2 800 000 ₽</span>
+                        </div>
+                    </div>
+                    <div class="select-place__size">
+                        <h4 class="select-place__size-heading">
+                            Размер участка
+                        </h4>
+                        <div id="slider" class="select-place__size-slider">
+                            
+                        </div>
+                        <div class="slider-values">
+                            <span class="select-place__size-left-number">5 соток</span>
+                            <span class="select-place__size-right-number">15 соток</span>
+                        </div>
+                    </div>
+                    <div class="select-place__settings-button-wrapper">
+                        <button class="select-place__settings-button" href="#">
+                            Ещё параметры
+                        </button>
+                        <img src="./img/green-arrow.png" alt="" srcset="">
+                    </div>
+
+                    <div class="select-place__settings select-place__hide-form">
+                        <div class="select-place__setting">
+                            <h3 class="select-place__setting-heading">
+                                Коттеджный поселок
+                            </h3>
+                            <div class="select-place__checkboxes">
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Альпийская долина</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Есенино</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Ёлки</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="select-place__setting">
+                            <h3 class="select-place__setting-heading">
+                                Готовность коммуникаций
+                            </h3>
+                            <div class="select-place__checkboxes">
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Заведен газ</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Электричество на участке</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Дороги из щебня / асфальта</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select-place__setting">
+                            <h3 class="select-place__setting-heading">
+                                Расположение
+                            </h3>
+                            <div class="select-place__checkboxes">
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Ирбитский тракт</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Московский тракт</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Участок с лесом</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Участок на холме</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Участок на углу</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Рядом с парком</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Участок с краю</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">На тупиковой улице</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">На центральной улице</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper select-place__checkbox-10">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Участок у реки</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select-place__setting">
+                            <h3 class="select-place__setting-heading">
+                                Расстояние до Тюмени
+                            </h3>
+                            <div class="select-place__checkboxes">
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">25 км</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">20 км</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">18 км</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select-place__setting">
+                            <h3 class="select-place__setting-heading">
+                                Готовность инфраструктуры
+                            </h3>
+                            <div class="select-place__checkboxes">
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Участок без построек</label>
+                                </div>
+                                <div class="select-place__checkbox-wrapper">
+                                    <input class="select-place__checkbox" type="checkbox" name="" id="">
+                                    <label class="select-place__setting-label" for="">Участок с домом</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <button class="green-button select-place__button">
+                        Подобрать участок
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="table-wrapper">
+        <span class="table-wrapper__span">
+            Вам подходит <b>473</b> из <b>499</b> свободных участков. Каждый день наши клиенты бронируют или покупают 5 участков. Спешите!
+        </span>
+        <div class="table-wrapper__sort">
+            <div class="table__sort-text">
+                Сортировать:
+            </div>
+
+            <div class="table__sort">
+                <div class="table__sort-parameter">
+                    по площади
+                </div>
+                <div class="table__sort-parameter">
+                    по цене участка
+                </div>
+                <div class="table__sort-parameter">
+                    по цене за сотку
+                </div>
+                <div class="table__sort-parameter">
+                    по размеру скидки
+                </div>
+            </div>
+        </div>
+        <table class="table">
+            <tr class="table__row">
+                <td class="table__territory-name">
+                    <div>
+                        <b>Альпийская долина</b>
+                    </div>
+                    Участок 304
+                </td>
+                <td class="table__territory-size">
+                    <div>10 сот.</div>
+                    1 000 м²
+                </td>
+                <td class="table__total-price">
+                    550 000 ₽
+                </td>  
+                <td class="table__price">
+                    <div>
+                        <s>
+                            65 000 ₽/сотка
+                        </s>
+                    </div>
+                    55 000 ₽/сотка
+                </td> 
+                <td class="table__description">
+                    Дороги из щебня, участок с краю, на холме
+                </td>   
+                <td class="table__on-map">
+                    <img src="./img/map-point.png" alt="" srcset="">
+                    <a class="table__on-map-link" href="">
+                        На карте
+                    </a>
+                </td>
+                <td>
+                    <div class="table__button-wrapper">
+                        <button class="white-button table__button">
+                            Забронировать
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__territory-name">
+                    <div>
+                        <b>Альпийская долина</b>
+                    </div>
+                    Участок 304
+                </td>
+                <td class="table__territory-size">
+                    <div>10 сот.</div>
+                    1 000 м²
+                </td>
+                <td class="table__total-price">
+                    550 000 ₽
+                </td>  
+                <td class="table__price">
+                    <div>
+                        <s>
+                            65 000 ₽/сотка
+                        </s>
+                    </div>
+                    55 000 ₽/сотка
+                </td> 
+                <td class="table__description">
+                    Дороги из щебня, участок с краю, на холме
+                </td>   
+                <td class="table__on-map">
+                    <img src="./img/map-point.png" alt="" srcset="">
+                    <a class="table__on-map-link" href="">
+                        На карте
+                    </a>
+                </td>
+                <td>
+                    <div class="table__button-wrapper">
+                        <button class="white-button table__button">
+                            Забронировать
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__territory-name">
+                    <div>
+                        <b>Альпийская долина</b>
+                    </div>
+                    Участок 304
+                </td>
+                <td class="table__territory-size">
+                    <div>10 сот.</div>
+                    1 000 м²
+                </td>
+                <td class="table__total-price">
+                    550 000 ₽
+                </td>  
+                <td class="table__price">
+                    <div>
+                        <s>
+                            65 000 ₽/сотка
+                        </s>
+                    </div>
+                    55 000 ₽/сотка
+                </td> 
+                <td class="table__description">
+                    Дороги из щебня, участок с краю, на холме
+                </td>   
+                <td class="table__on-map">
+                    <img src="./img/map-point.png" alt="" srcset="">
+                    <a class="table__on-map-link" href="">
+                        На карте
+                    </a>
+                </td>
+                <td>
+                    <div class="table__button-wrapper">
+                        <button class="white-button table__button">
+                            Забронировать
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__territory-name">
+                    <div>
+                        <b>Альпийская долина</b>
+                    </div>
+                    Участок 304
+                </td>
+                <td class="table__territory-size">
+                    <div>10 сот.</div>
+                    1 000 м²
+                </td>
+                <td class="table__total-price">
+                    550 000 ₽
+                </td>  
+                <td class="table__price">
+                    <div>
+                        <s>
+                            65 000 ₽/сотка
+                        </s>
+                    </div>
+                    55 000 ₽/сотка
+                </td> 
+                <td class="table__description">
+                    Дороги из щебня, участок с краю, на холме
+                </td>   
+                <td class="table__on-map">
+                    <img src="./img/map-point.png" alt="" srcset="">
+                    <a class="table__on-map-link" href="">
+                        На карте
+                    </a>
+                </td>
+                <td>
+                    <div class="table__button-wrapper">
+                        <a href="">
+
+                            <button class="white-button table__button">
+                                Забронировать
+                            </button>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    </section>
+
+    <section class="attention">
+
+    </section>
+
+    <section class="deal-offer">
+        <h2></h2>
+    </section>
+    
+
+
+    <script src="JQuery.js"></script>
+    <script src="jquery-ui-1.13.0/jquery-ui.min.js"></script>
+    <script src="./slick-1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="http://maps.api.2gis.ru/1.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+    <link rel="stylesheet" href="jquery-ui-1.13.0/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
+
+</head>
+<body>
+    <div class="shadow">
+            
+    </div>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__cross green-button"></div>
+        <a class="mobile-menu__phone">
+            +7 3452
+            <p>565-455</p>
+        </a>
+    </div>
+
+    <div class="call-back">
+        <img class="call-back__cross" src="./img/cross.png" alt="" srcset="">
+        <h2 class="call-back__heading">Обратный звонок</h2>
+        <span class="call-back__description">Оставьте контактные данные, и мы вам перезвоним!</span>
+        <input class="call-back__input" type="text" placeholder="Имя">
+        <input class="call-back__input phone" type="text" placeholder="Телефон">
+        <div class="call-back__checkbox-wrapper">
+            <input class="call-back__checkbox" type="checkbox" name="">
+            <span class="call-back__checkbox-span"> Подтверждаю согласие с <b>политикой обработки персональных данных</b></span>
+        </div>
+        <div class="call-back__button-wrapper">
+            <button class="green-button call-back__button">Отправить</button>
+        </div>
+    </div>
+
+    
+    
+    <header class="page-header">
+        <div class="page-header__logo">
+            <img src="img/navigator-logo.png">
+        </div>
+        <nav class="page-header__nav">
+            <div class="page-nav__element">
+                <span class="page-nav__element-span">
+                    О компании
+                </span> 
+                <div class="page-nav__element-down-arrow down-arrow">
+                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.83333 0.166626L10 1.33329L5 6.33329L-5.09966e-08 1.33329L1.16667 0.166626L5 3.99996L8.83333 0.166626Z" fill="#675A54">
+                        </path>
+                    </svg>
+                </div>
+                <div class="page-header__about-company-menu-wrapper dropdown-menu-wrapper">
+                    <ul class="page-header__about-company-menu dropdown-menu">
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Компания</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Новости</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Истории жителей</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Полезные статьи</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Тендеры</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Вакансии</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="page-nav__element">
+                <span class="page-nav__element-span">
+                    Коттеджные поселки
+                </span> 
+                <div class="page-nav__element-down-arrow down-arrow">
+                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.83333 0.166626L10 1.33329L5 6.33329L-5.09966e-08 1.33329L1.16667 0.166626L5 3.99996L8.83333 0.166626Z" fill="#675A54">
+                        </path>
+                    </svg>
+                </div>
+                <div class="page-header__cottage-settlements-menu-wrapper dropdown-menu-wrapper">
+                    <ul class="page-header__cottage-settlements-menu dropdown-menu">
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Альпийская долина</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Есенино</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Ёлки</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="./selectPlace.html">Выбрать участок</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-nav__element">
+                <span class="page-nav__element-span">
+                    Покупателям
+                </span> 
+                <div class="down-arrow">
+                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.83333 0.166626L10 1.33329L5 6.33329L-5.09966e-08 1.33329L1.16667 0.166626L5 3.99996L8.83333 0.166626Z" fill="#675A54">
+                        </path>
+                    </svg>
+                </div>
+                <div class="page-header__buyers-menu-wrapper dropdown-menu-wrapper">
+                    <ul class="page-header__buyers-menu dropdown-menu">
+                        <!-- переделать в пиксели left -->
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Рассрочка</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Ипотека</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Цены</a></li>
+                        <li class="dropdown-menu__element"><a class="dropdown-menu__element-link" href="#">Лояльный покупатель</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-nav__element">
+                Обслуживающая компания
+            </div>
+            <div class="page-nav__element">
+                Таунхаусы
+            </div>
+        </nav>
+        <a class="page-header__phone">
+            +7 3452
+            <p>565-455</p>
+        </a>
+        <button class="page-header__call green-button">
+            Заказать звонок
+        </button>
+        <button class="page-header__menu">
+            <img src="./img/mobile-menu-icon.png" alt="">
+        </button>
+    </header>
+
+
+
+
+
+    <section class="main-section">
+        <div class="main-section__background">
+            
+        </div>
+        <div class="main-section__banner-wrapper">
+            <div class="main-section__banner">
+                <div class="main-section__banner-content">
+                    <h1 class="main-section__banner-heading">Продажа земельных участков</h1>
+                    <span class="main-section__banner-span">под ИЖС в Тюмени</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main-section__advantages">
+            <div class="main-section__slider">
+                <div class="main-section__card ">
+                    <div class="main-section__card-icon">
+                        <img src="img/Ellipse-clock.png" alt="" class="ellipse__background ellipse__clock">
+                        <svg width="62" height="49" viewBox="0 0 62 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4732 15.8272H3.35291V19.4546H10.4732V15.8272Z" fill="#D1D1D1"></path>
+                            <path d="M10.4732 30.337H3.35291V33.9645H10.4732V30.337Z" fill="#D1D1D1"></path>
+                            <path d="M10.4734 23.0821H0V26.7094H10.4734V23.0821Z" fill="#D1D1D1"></path>
+                            <path d="M38.053 0.984436C24.8487 0.984436 14.1061 11.7111 14.1061 24.8958C14.1061 38.0806 24.8486 48.8073 38.053 48.8073C51.2574 48.8073 62 38.0806 62 24.8958C62 11.7111 51.2574 0.984436 38.053 0.984436ZM38.053 45.1798C26.8518 45.1798 17.7389 36.0804 17.7389 24.8958C17.7389 13.7113 26.8518 4.61187 38.053 4.61187C49.2543 4.61187 58.3672 13.7113 58.3672 24.8958C58.3672 36.0804 49.2543 45.1798 38.053 45.1798Z" fill="#D1D1D1"></path>
+                            <path d="M39.226 25.7971V14.0808H35.5931V27.7147L44.9547 34.0848L47.0005 31.0872L39.226 25.7971Z" fill="#D1D1D1"></path>
+                        </svg>
+                    </div>
+                    <div class="main-section__card-description">
+                        <div>
+                            <h3>Близость к городу</h3>
+                        </div>
+                        <div>
+                            <span>20 минут до центра Тюмени</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-section__card ecology__card">
+                    <div class="main-section__card-icon">
+                        <img src="img/Ellipse-leaf.png" alt="" class="ellipse__background ellipse__leaf">
+                        <svg width="34" height="50" viewBox="0 0 34 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.3399 15.81C30.0223 12.7979 28.1887 9.93145 25.8898 7.28975C21.9839 2.80166 18.1011 0.521777 17.9376 0.426953L17.2023 0L16.4668 0.426953C16.3034 0.521875 12.4206 2.80166 8.51467 7.28975C6.21575 9.93145 4.38215 12.7979 3.06458 15.81C1.41077 19.5906 0.572388 23.605 0.572388 27.7414C0.572388 36.368 7.26956 43.4594 15.7375 44.0901V50H18.6671V44.0901C27.1351 43.4593 33.8323 36.3679 33.8323 27.7414C33.8322 23.6051 32.9937 19.5906 31.3399 15.81ZM10.6592 9.28828C12.5014 7.15889 14.3595 5.55488 15.7374 4.49424V17.3037L7.93128 12.9265C8.73713 11.6734 9.64758 10.4578 10.6592 9.28828ZM5.72444 17.0395C5.95481 16.5099 6.20344 15.9849 6.46897 15.465L15.7374 20.6624V30.0086L3.86145 23.3491C4.21838 21.1854 4.83948 19.0746 5.72444 17.0395ZM15.7375 41.1499C8.88704 40.5268 3.50188 34.7517 3.50188 27.7414C3.50188 27.3336 3.51252 26.9272 3.53059 26.5223L15.7375 33.3674V41.1499ZM28.6558 16.984C29.5535 19.0363 30.1827 21.1657 30.5429 23.3491L18.667 30.0086V20.6624L27.9359 15.4647C28.1923 15.9666 28.4324 16.473 28.6558 16.984ZM18.6669 17.3037V4.49102C20.025 5.53594 21.8518 7.11231 23.6798 9.21299C24.7176 10.4056 25.6503 11.6462 26.4736 12.9262L18.6669 17.3037ZM18.667 41.1499V33.3674L30.8739 26.5224C30.8919 26.9274 30.9026 27.3337 30.9026 27.7415C30.9027 34.7516 25.5176 40.5268 18.667 41.1499Z" fill="#D1D1D1">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="main-section__card-description clock__description">
+                        <div>
+                            <h3>Экология</h3>
+                        </div>
+                        <div>
+                            <span>Леса, реки - живописная природа. Тишина и покой</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-section__card infrastructure__card">
+                    <div class="main-section__card-icon">
+                        <img src="img/Ellipse-clock.png" alt="" class="ellipse__background ellipse__infrastructure">
+                        <svg width="55" height="51" viewBox="0 0 55 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M54.3356 14.2953C53.631 12.9791 52.4561 12.0164 51.0272 11.5841C49.5984 11.1516 48.0867 11.3019 46.7707 12.0065C45.4548 12.7113 44.4919 13.8862 44.0596 15.3151C43.7715 16.2669 43.748 17.2545 43.9685 18.1973L37.934 21.4286C36.0986 18.8517 33.2375 17.0565 29.9502 16.6429V11.4933C32.3291 10.8517 34.085 8.67628 34.085 6.09747C34.085 3.01588 31.5779 0.508789 28.4963 0.508789C25.4148 0.508789 22.9074 3.01588 22.9074 6.09771C22.9074 8.67653 24.6636 10.8519 27.0423 11.4935V16.6427C22.8437 17.1711 19.3383 19.9535 17.7808 23.7382L11.1764 21.9588C11.1779 20.9903 10.9312 20.0337 10.435 19.1718C9.69036 17.8779 8.48637 16.9514 7.04516 16.563C4.06873 15.7609 0.996588 17.53 0.194812 20.5054C-0.193597 21.9469 0.00266746 23.4533 0.74726 24.7469C1.49185 26.0406 2.69585 26.9674 4.13706 27.3558C4.62093 27.4861 5.11184 27.5506 5.60007 27.5506C6.56564 27.5506 7.5191 27.2979 8.37879 26.8033C9.24065 26.3073 9.9346 25.6044 10.4199 24.7663L17.0246 26.546C16.9533 27.0648 16.9134 27.5932 16.9134 28.1314C16.9134 30.8018 17.8242 33.2621 19.3483 35.2236L14.5059 40.0659C12.3702 38.8389 9.59344 39.1309 7.77037 40.9535C5.59135 43.1325 5.59135 46.6781 7.77037 48.8574C8.86 49.947 10.291 50.4917 11.7223 50.4917C13.1533 50.4917 14.5846 49.947 15.6742 48.8574C17.4971 47.0343 17.789 44.2575 16.5618 42.1221L21.4042 37.2797C23.3656 38.8038 25.8257 39.7146 28.4963 39.7146C31.167 39.7146 33.6271 38.8038 35.5885 37.2797L40.4309 42.1221C39.2039 44.2578 39.4956 47.0345 41.3185 48.8574C42.4081 49.947 43.8391 50.4917 45.2704 50.4917C46.7017 50.4917 48.1327 49.9468 49.2223 48.8574C51.4013 46.6784 51.4013 43.1328 49.2223 40.9535C47.3995 39.1307 44.6225 38.8389 42.4871 40.0659L37.6447 35.2236C39.1688 33.2621 40.0796 30.802 40.0796 28.1314C40.0796 26.6725 39.8058 25.2768 39.3112 23.9897L45.3414 20.7608C46.0038 21.4671 46.8388 21.9949 47.7908 22.283C48.3258 22.4448 48.8727 22.525 49.4164 22.525C50.3246 22.525 51.2242 22.3011 52.0473 21.8604C53.3635 21.1558 54.3262 19.9809 54.7584 18.552C55.1907 17.1232 55.0402 15.6112 54.3356 14.2953ZM50.6742 19.2968C50.043 19.6351 49.3178 19.7071 48.6323 19.4994C47.9468 19.2922 47.3833 18.8302 47.0452 18.1987C46.707 17.5675 46.6353 16.8421 46.8427 16.1566C47.0499 15.4711 47.5119 14.9076 48.1434 14.5695C48.5383 14.358 48.9698 14.2507 49.4055 14.2507C49.6662 14.2507 49.9286 14.2892 50.1852 14.3667C50.8707 14.5739 51.4343 15.036 51.7723 15.6674C52.1106 16.2986 52.1823 17.0238 51.9749 17.7093C51.7677 18.3952 51.3056 18.9588 50.6742 19.2968ZM37.1715 28.1311C37.1715 32.9147 33.2796 36.8065 28.4961 36.8065C23.7126 36.8065 19.8207 32.9147 19.8207 28.1311C19.8207 23.3476 23.7126 19.4558 28.4961 19.4558C33.2796 19.4558 37.1715 23.3476 37.1715 28.1311ZM25.815 6.09771C25.815 4.61919 27.0178 3.41665 28.4961 3.41665C29.9744 3.41665 31.1772 4.61943 31.1772 6.09771C31.1772 7.57599 29.9744 8.77878 28.4961 8.77878C27.0178 8.77878 25.815 7.57599 25.815 6.09771ZM4.89352 24.5482C4.20199 24.3619 3.62459 23.9173 3.26744 23.2968C2.91004 22.676 2.81603 21.9534 3.00236 21.2619C3.38689 19.8343 4.8613 18.986 6.28869 19.3705C6.98022 19.5568 7.55763 20.0012 7.91502 20.622C8.27217 21.2428 8.36619 21.9653 8.17986 22.6568C7.79532 24.0845 6.3214 24.9328 4.89352 24.5482ZM13.6181 46.801C12.573 47.8462 10.8718 47.8462 9.82629 46.801C8.78101 45.7557 8.78101 44.0547 9.82629 43.0092C10.3489 42.4865 11.0356 42.2253 11.7223 42.2253C12.4087 42.2253 13.0954 42.4868 13.6181 43.0092C14.6634 44.0547 14.6634 45.7557 13.6181 46.801ZM47.1659 43.0092C48.2112 44.0545 48.2112 45.7554 47.1659 46.801C46.1209 47.8462 44.4197 47.8462 43.3741 46.801C42.3288 45.7557 42.3288 44.0547 43.3741 43.0092C43.8968 42.4865 44.5835 42.2253 45.2701 42.2253C45.9566 42.2253 46.6433 42.4865 47.1659 43.0092Z" fill="#D1D1D1">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="main-section__card-description clock__description">
+                        <div>
+                            <h3>Инфраструктура</h3>
+                        </div>
+                        <div>
+                            <span>Рядом магазины, школы, больницы, детские сады</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-section__card communication__card">
+                    <div class="main-section__card-icon">
+                        <img src="img/Ellipse-lamp.png" alt="" class="ellipse__background ellipse__lamp">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.6379 7.28792C26.6379 8.19221 25.9048 8.92534 25.0005 8.92534C24.0962 8.92534 23.363 8.19221 23.363 7.28792V1.63749C23.363 0.733191 24.0962 6.10352e-05 25.0005 6.10352e-05C25.9048 6.10352e-05 26.6379 0.733191 26.6379 1.63749V7.28792ZM12.0657 24.232C12.0657 17.0996 17.8685 11.2968 25.0009 11.2968C32.1327 11.2968 37.9348 17.0996 37.935 24.232C37.935 27.1536 36.9772 29.913 35.1652 32.2119C34.8601 32.5999 34.5252 32.9934 34.1709 33.4097L34.1613 33.421L34.1078 33.4839C32.8677 34.9423 31.4748 36.5808 31.0028 38.2872C30.9236 38.5747 30.8843 39.1288 30.8897 39.8882V40.8879C30.8897 41.7922 30.1566 42.5253 29.2523 42.5253H20.6783C19.774 42.5253 19.0409 41.7922 19.0409 40.8879V39.8997C19.047 39.3184 19.0319 38.5636 18.9258 38.17C18.4564 36.4522 17.1995 34.9934 15.9839 33.583L15.9621 33.5577C15.5647 33.0968 15.1894 32.6615 14.8323 32.2067C13.0228 29.909 12.0657 27.151 12.0657 24.232ZM31.6676 31.2982C32.0043 30.9029 32.3222 30.5293 32.5918 30.1863C33.9452 28.4692 34.66 26.4108 34.66 24.232C34.66 18.9053 30.3269 14.5716 25.0009 14.5716C19.6742 14.5716 15.3405 18.9053 15.3405 24.232C15.3405 26.4084 16.0549 28.4661 17.4063 30.1822C17.7187 30.5795 18.0702 30.9873 18.4425 31.419L18.4645 31.4447L18.4648 31.445C19.7819 32.9735 21.4207 34.8752 22.0865 37.3124C22.1837 37.6726 22.29 38.2075 22.3127 39.2505H27.6206C27.6472 38.2684 27.7518 37.7576 27.8459 37.4161C28.5113 35.0106 30.1531 33.0795 31.6017 31.3757L31.6676 31.2982ZM20.6784 42.9901H29.2522C30.1565 42.9901 30.8898 43.7233 30.8898 44.6276C30.8898 45.5319 30.1567 46.265 29.2524 46.265H20.6784C19.7741 46.265 19.041 45.5319 19.041 44.6276C19.041 43.7233 19.7741 42.9901 20.6784 42.9901ZM27.1085 46.7252H22.8218C21.9175 46.7252 21.1843 47.4584 21.1843 48.3626C21.1843 49.2669 21.9175 50.0001 22.8218 50.0001H27.1085C28.0128 50.0001 28.746 49.2669 28.746 48.3626C28.746 47.4584 28.0128 46.7252 27.1085 46.7252ZM41.9461 22.5946H47.5948C48.4991 22.5946 49.2322 23.3277 49.2322 24.232C49.2322 25.1363 48.4991 25.8694 47.5948 25.8694H41.9461C41.0418 25.8694 40.3087 25.1363 40.3087 24.232C40.3087 23.3277 41.0418 22.5946 41.9461 22.5946ZM9.6925 24.232C9.6925 23.3277 8.95937 22.5946 8.05507 22.5946H2.40574C1.50144 22.5946 0.768311 23.3277 0.768311 24.232C0.768311 25.1363 1.50144 25.8694 2.40574 25.8694H8.05507C8.95937 25.8694 9.6925 25.1363 9.6925 24.232ZM38.1398 35.056C37.5004 34.4166 36.4638 34.4163 35.8241 35.0558C35.1846 35.6953 35.1844 36.7319 35.8239 37.3716L39.8183 41.3671C40.1381 41.687 40.5571 41.8468 40.9763 41.8468C41.3952 41.8468 41.8142 41.687 42.1341 41.3673C42.7735 40.7279 42.7737 39.6913 42.1343 39.0516L38.1398 35.056ZM13.0169 13.8868C12.5978 13.8868 12.1788 13.7267 11.859 13.4069L7.86604 9.41244C7.22679 8.77297 7.22679 7.73638 7.86648 7.09691C8.50595 6.45766 9.54255 6.45766 10.182 7.09734L14.1749 11.0918C14.8142 11.7313 14.8142 12.7679 14.1745 13.4073C13.8549 13.7269 13.4359 13.8868 13.0169 13.8868ZM11.8607 35.056L7.86603 39.0516C7.22656 39.691 7.22678 40.7278 7.86625 41.3671C8.18587 41.6867 8.60505 41.8465 9.02402 41.8465C9.44298 41.8465 9.86216 41.6867 10.182 41.3669L14.1767 37.3713C14.8161 36.7319 14.8159 35.695 14.1765 35.0558C13.537 34.4165 12.5002 34.4165 11.8607 35.056ZM38.1407 13.4069C37.8209 13.7267 37.4017 13.8865 36.9827 13.8865C36.5635 13.8865 36.1446 13.7269 35.8252 13.4071C35.1857 12.7678 35.1855 11.731 35.825 11.0915L39.8185 7.09732C40.4578 6.45763 41.4946 6.45763 42.1341 7.0971C42.7735 7.73635 42.7737 8.77317 42.1343 9.41264L38.1407 13.4069Z" fill="#D1D1D1">
+                            </path>
+                        </svg>
+                    </div> 
+                    <div class="main-section__card-description clock__description">
+                        <div>
+                            <h3>Коммуникации</h3>
+                        </div>
+                        <div>
+                            <span>Все коммуникации включены в стоимость</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="territories">
+        <div class="territories__tabs-navigation-wrapper">
+            <div class="territories__tabs-navigation tabs-navigation">
+                <div class="green-background">
+
+                </div>
+                <div class="territories__tab tabs-navigation__tab territories__list-button tabs-navigation__tab_active">
+                    <span>
+                        Списком
+                    </span>
+                </div>
+                <div class="territories__tab territories__map-button tabs-navigation__tab">
+                    <span>
+                        На карте
+                    </span>
+                </div>
+            </div>
+
+            <div class="arrow-slider arrow-slider__points-4 territories__arrow-slider">
+                <div class="territories__arrows-containter arrows-container">
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="slider-cards">
+            <div class="center territories__list">
+                <div>
+                    <div class="slider-card">
+                        <div class="slider-card__header territories__card-header">
+                            <div class="slider-card__header-circle_white">
+                                <div class="slider-card__header-icon">
+                                </div>
+                            </div>
+                            <div class="slider-card__header-name ">
+                                Альпийская долина
+                            </div>
+                        </div>
+                        <div class="slider-card__content">
+                            <div class="slider-card__content-description">
+                                с. Кулига, 25 км по Ирбитскому тракту, уникальный природный ландшафт
+                            </div>
+                            <div class="slider-card__content-info">
+                                <div class="slider-card__info-element">
+                                    <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.2857 6.18701H0V17.1861H14.2857V6.18701Z" fill="#7EC95C">
+                                        </path>
+                                        <path d="M9.28571 10.9991C9.28571 9.86003 8.32643 8.9368 7.14286 8.9368C5.95929 8.9368 5 9.86003 5 10.9991C5 11.9045 5.61 12.6655 6.45357 12.9425C6.44571 12.9824 6.42857 13.0195 6.42857 13.0614V14.4363C6.42857 14.8158 6.74857 15.1237 7.14286 15.1237C7.53714 15.1237 7.85714 14.8158 7.85714 14.4363V13.0614C7.85714 13.0195 7.84 12.9824 7.83214 12.9425C8.67571 12.6655 9.28571 11.9045 9.28571 10.9991Z" fill="#48AD19">
+        
+                                        </path>
+                                        <path d="M3.57142 4.8121C3.57142 2.91682 5.17357 1.37489 7.14285 1.37489C9.11214 1.37489 10.7143 2.91682 10.7143 4.8121V6.18699H12.1429V4.8121C12.1429 2.15857 9.9 0 7.14285 0C4.38571 0 2.14285 2.15857 2.14285 4.8121V6.18699H3.57142V4.8121Z" fill="#48AD19">
+        
+                                        </path>
+                                    </svg>
+                                    <span>618 продано</span>
+                                </div>
+                                <div class="slider-card__info-element">
+                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.79217 7.97784H6.49347C4.13439 7.13415 2.59738 5.15529 2.59738 2.961V1.01001H11.6883V2.961C11.6883 5.15529 10.1513 7.13415 7.79217 7.97784Z" fill="#7EC95C">
+        
+                                        </path>
+                                        <path d="M6.49347 7.97708H7.79217C10.1513 8.82078 11.6883 10.7997 11.6883 12.994V14.945H2.59738V12.994C2.59738 10.7997 4.13439 8.82078 6.49347 7.97708Z" fill="#7EC95C">
+        
+                                        </path>
+                                        <path d="M0.649351 1.59015H1.2987H2.5974H13.6364C13.9955 1.59015 14.2857 1.32995 14.2857 1.00935C14.2857 0.688755 13.9955 0.428558 13.6364 0.428558H2.5974H1.2987H0.649351C0.29026 0.428558 0 0.688755 0 1.00935C0 1.32995 0.29026 1.59015 0.649351 1.59015Z" fill="#48AD19">
+        
+                                        </path>
+                                        <path d="M13.6357 14.3632H1.9474C1.94545 14.3632 1.9435 14.3644 1.94091 14.3644H0.64935C0.29026 14.3644 0 14.6246 0 14.9452C0 15.2658 0.29026 15.526 0.64935 15.526H2.5974C2.59935 15.526 2.6013 15.5248 2.60389 15.5248H13.6357C13.9948 15.5248 14.2851 15.2646 14.2851 14.944C14.2851 14.6234 13.9948 14.3632 13.6357 14.3632Z" fill="#48AD19">
+                                        </path>
+                                    </svg>
+                                    <span>8 забронировано</span>
+                                </div>
+                                <div class="slider-card__info-element">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="7.14286" cy="7.85715" r="7.14286" fill="#7EC95C">
+        
+                                        </circle>
+                                        <path d="M7.60502 3.57144H6.59663V11.0232H7.60502V3.57144Z" fill="#48AD19">
+        
+                                        </path>
+                                        <path d="M7.10084 11.4889L3.57144 8.41172L4.31564 7.76297L7.10084 10.1914L9.88604 7.76297L10.6302 8.41172L7.10084 11.4889Z" fill="#48AD19">
+        
+                                        </path>
+                                    </svg>
+                                    <span>233 доступно</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="slider-card__footer territories__card-footer">
+                            <div class="slider-card__content-description">
+                                Участки от 10 до 12 соток
+                            </div>
+        
+                            <div class="slider-card__button-wrapper">
+                                <svg class="arrow-link__arrow" width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.2071 8.20711C18.5976 7.81658 18.5976 7.18342 18.2071 6.79289L11.8431 0.428932C11.4526 0.0384078 10.8195 0.0384078 10.4289 0.428932C10.0384 0.819457 10.0384 1.45262 10.4289 1.84315L16.0858 7.5L10.4289 13.1569C10.0384 13.5474 10.0384 14.1805 10.4289 14.5711C10.8195 14.9616 11.4526 14.9616 11.8431 14.5711L18.2071 8.20711ZM0.5 8.5L17.5 8.5V6.5L0.5 6.5L0.5 8.5Z" fill="#6BBD45 ">
+                                    </path>
+                                </svg>
+                                <div class="slider-card__button">
+                                    <svg viewBox="0 0 26 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.5 2C13.9264 2 24 12.0736 24 24.5C24 30.524 21.6326 35.9951 17.7775 40.0337C16.8686 40.9858 15.8771 41.8582 14.8145 42.6395C11.0863 45.3806 6.48226 47 1.5 47" stroke="#6BBD45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="slider-card">
+                        <div class="slider-card__header territories__card-header">
+                            <div class="slider-card__header-circle_white">
+                                <div class="slider-card__header-icon">
+                                </div>
+                            </div>
+                            <div class="slider-card__header-name ">
+                                Альпийская долина
+                            </div>
+                        </div>
+        
+                        <div class="slider-card__content">
+                            <div class="slider-card__content-description">
+                                с. Кулига, 25 км по Ирбитскому тракту, уникальный природный ландшафт
+                            </div>
+                            <div class="slider-card__content-info">
+                                <div class="slider-card__info-element">
+                                    <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.2857 6.18701H0V17.1861H14.2857V6.18701Z" fill="#7EC95C">
+                                        </path>
+                                        <path d="M9.28571 10.9991C9.28571 9.86003 8.32643 8.9368 7.14286 8.9368C5.95929 8.9368 5 9.86003 5 10.9991C5 11.9045 5.61 12.6655 6.45357 12.9425C6.44571 12.9824 6.42857 13.0195 6.42857 13.0614V14.4363C6.42857 14.8158 6.74857 15.1237 7.14286 15.1237C7.53714 15.1237 7.85714 14.8158 7.85714 14.4363V13.0614C7.85714 13.0195 7.84 12.9824 7.83214 12.9425C8.67571 12.6655 9.28571 11.9045 9.28571 10.9991Z" fill="#48AD19">
+        
+                                        </path>
+                                        <path d="M3.57142 4.8121C3.57142 2.91682 5.17357 1.37489 7.14285 1.37489C9.11214 1.37489 10.7143 2.91682 10.7143 4.8121V6.18699H12.1429V4.8121C12.1429 2.15857 9.9 0 7.14285 0C4.38571 0 2.14285 2.15857 2.14285 4.8121V6.18699H3.57142V4.8121Z" fill="#48AD19">
+        
+                                        </path>
+                                    </svg>
+                                    <span>618 продано</span>
+                                </div>
+                                <div class="slider-card__info-element">
+                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.79217 7.97784H6.49347C4.13439 7.13415 2.59738 5.15529 2.59738 2.961V1.01001H11.6883V2.961C11.6883 5.15529 10.1513 7.13415 7.79217 7.97784Z" fill="#7EC95C">
+        
+                                        </path>
+                                        <path d="M6.49347 7.97708H7.79217C10.1513 8.82078 11.6883 10.7997 11.6883 12.994V14.945H2.59738V12.994C2.59738 10.7997 4.13439 8.82078 6.49347 7.97708Z" fill="#7EC95C">
+        
+                                        </path>
+                                        <path d="M0.649351 1.59015H1.2987H2.5974H13.6364C13.9955 1.59015 14.2857 1.32995 14.2857 1.00935C14.2857 0.688755 13.9955 0.428558 13.6364 0.428558H2.5974H1.2987H0.649351C0.29026 0.428558 0 0.688755 0 1.00935C0 1.32995 0.29026 1.59015 0.649351 1.59015Z" fill="#48AD19">
+        
+                                        </path>
+                                        <path d="M13.6357 14.3632H1.9474C1.94545 14.3632 1.9435 14.3644 1.94091 14.3644H0.64935C0.29026 14.3644 0 14.6246 0 14.9452C0 15.2658 0.29026 15.526 0.64935 15.526H2.5974C2.59935 15.526 2.6013 15.5248 2.60389 15.5248H13.6357C13.9948 15.5248 14.2851 15.2646 14.2851 14.944C14.2851 14.6234 13.9948 14.3632 13.6357 14.3632Z" fill="#48AD19">
+                                        </path>
+                                    </svg>
+                                    <span>8 забронировано</span>
+                                </div>
+                                <div class="slider-card__info-element">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="7.14286" cy="7.85715" r="7.14286" fill="#7EC95C">
+        
+                                        </circle>
+                                        <path d="M7.60502 3.57144H6.59663V11.0232H7.60502V3.57144Z" fill="#48AD19">
+        
+                                        </path>
+                                        <path d="M7.10084 11.4889L3.57144 8.41172L4.31564 7.76297L7.10084 10.1914L9.88604 7.76297L10.6302 8.41172L7.10084 11.4889Z" fill="#48AD19">
+        
+                                        </path>
+                                    </svg>
+                                    <span>233 доступно</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="slider-card__footer territories__card-footer">
+                            <div class="slider-card__content-description">
+                                Участки от 10 до 12 соток
+                            </div>
+        
+                            <div class="slider-card__button-wrapper">
+                                <svg class="arrow-link__arrow" width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.2071 8.20711C18.5976 7.81658 18.5976 7.18342 18.2071 6.79289L11.8431 0.428932C11.4526 0.0384078 10.8195 0.0384078 10.4289 0.428932C10.0384 0.819457 10.0384 1.45262 10.4289 1.84315L16.0858 7.5L10.4289 13.1569C10.0384 13.5474 10.0384 14.1805 10.4289 14.5711C10.8195 14.9616 11.4526 14.9616 11.8431 14.5711L18.2071 8.20711ZM0.5 8.5L17.5 8.5V6.5L0.5 6.5L0.5 8.5Z" fill="#6BBD45 ">
+                                    </path>
+                                </svg>
+                                <div class="slider-card__button">
+                                    <svg viewBox="0 0 26 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.5 2C13.9264 2 24 12.0736 24 24.5C24 30.524 21.6326 35.9951 17.7775 40.0337C16.8686 40.9858 15.8771 41.8582 14.8145 42.6395C11.0863 45.3806 6.48226 47 1.5 47" stroke="#6BBD45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+    
+                <div>
+                    <div class="slider-card">
+                        <div class="slider-card__header territories__card-header">
+                            <div class="slider-card__header-circle_white">
+                                <div class="slider-card__header-icon">
+                                </div>
+                            </div>
+                            <div class="slider-card__header-name ">
+                                Альпийская долина
+                            </div>
+                        </div>
+        
+                        <div class="slider-card__content">
+                            <div class="slider-card__content-description">
+                                с. Кулига, 25 км по Ирбитскому тракту, уникальный природный ландшафт
+                            </div>
+                            <div class="slider-card__content-info">
+                                <div class="slider-card__info-element">
+                                    <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.2857 6.18701H0V17.1861H14.2857V6.18701Z" fill="#7EC95C">
+                                        </path>
+                                        <path d="M9.28571 10.9991C9.28571 9.86003 8.32643 8.9368 7.14286 8.9368C5.95929 8.9368 5 9.86003 5 10.9991C5 11.9045 5.61 12.6655 6.45357 12.9425C6.44571 12.9824 6.42857 13.0195 6.42857 13.0614V14.4363C6.42857 14.8158 6.74857 15.1237 7.14286 15.1237C7.53714 15.1237 7.85714 14.8158 7.85714 14.4363V13.0614C7.85714 13.0195 7.84 12.9824 7.83214 12.9425C8.67571 12.6655 9.28571 11.9045 9.28571 10.9991Z" fill="#48AD19">
+        
+                                        </path>
+                                        <path d="M3.57142 4.8121C3.57142 2.91682 5.17357 1.37489 7.14285 1.37489C9.11214 1.37489 10.7143 2.91682 10.7143 4.8121V6.18699H12.1429V4.8121C12.1429 2.15857 9.9 0 7.14285 0C4.38571 0 2.14285 2.15857 2.14285 4.8121V6.18699H3.57142V4.8121Z" fill="#48AD19">
+        
+                                        </path>
+                                    </svg>
+                                    <span>618 продано</span>
+                                </div>
+                                <div class="slider-card__info-element">
+                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.79217 7.97784H6.49347C4.13439 7.13415 2.59738 5.15529 2.59738 2.961V1.01001H11.6883V2.961C11.6883 5.15529 10.1513 7.13415 7.79217 7.97784Z" fill="#7EC95C">
+        
+                                        </path>
+                                        <path d="M6.49347 7.97708H7.79217C10.1513 8.82078 11.6883 10.7997 11.6883 12.994V14.945H2.59738V12.994C2.59738 10.7997 4.13439 8.82078 6.49347 7.97708Z" fill="#7EC95C">
+        
+                                        </path>
+                                        <path d="M0.649351 1.59015H1.2987H2.5974H13.6364C13.9955 1.59015 14.2857 1.32995 14.2857 1.00935C14.2857 0.688755 13.9955 0.428558 13.6364 0.428558H2.5974H1.2987H0.649351C0.29026 0.428558 0 0.688755 0 1.00935C0 1.32995 0.29026 1.59015 0.649351 1.59015Z" fill="#48AD19">
+        
+                                        </path>
+                                        <path d="M13.6357 14.3632H1.9474C1.94545 14.3632 1.9435 14.3644 1.94091 14.3644H0.64935C0.29026 14.3644 0 14.6246 0 14.9452C0 15.2658 0.29026 15.526 0.64935 15.526H2.5974C2.59935 15.526 2.6013 15.5248 2.60389 15.5248H13.6357C13.9948 15.5248 14.2851 15.2646 14.2851 14.944C14.2851 14.6234 13.9948 14.3632 13.6357 14.3632Z" fill="#48AD19">
+                                        </path>
+                                    </svg>
+                                    <span>8 забронировано</span>
+                                </div>
+                                <div class="slider-card__info-element">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="7.14286" cy="7.85715" r="7.14286" fill="#7EC95C">
+        
+                                        </circle>
+                                        <path d="M7.60502 3.57144H6.59663V11.0232H7.60502V3.57144Z" fill="#48AD19">
+        
+                                        </path>
+                                        <path d="M7.10084 11.4889L3.57144 8.41172L4.31564 7.76297L7.10084 10.1914L9.88604 7.76297L10.6302 8.41172L7.10084 11.4889Z" fill="#48AD19">
+        
+                                        </path>
+                                    </svg>
+                                    <span>233 доступно</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="slider-card__footer territories__card-footer">
+                            <div class="slider-card__content-description">
+                                Участки от 10 до 12 соток
+                            </div>
+        
+                            <div class="slider-card__button-wrapper">
+                                <svg class="arrow-link__arrow" width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.2071 8.20711C18.5976 7.81658 18.5976 7.18342 18.2071 6.79289L11.8431 0.428932C11.4526 0.0384078 10.8195 0.0384078 10.4289 0.428932C10.0384 0.819457 10.0384 1.45262 10.4289 1.84315L16.0858 7.5L10.4289 13.1569C10.0384 13.5474 10.0384 14.1805 10.4289 14.5711C10.8195 14.9616 11.4526 14.9616 11.8431 14.5711L18.2071 8.20711ZM0.5 8.5L17.5 8.5V6.5L0.5 6.5L0.5 8.5Z" fill="#6BBD45 ">
+                                    </path>
+                                </svg>
+                                <div class="slider-card__button">
+                                    <svg viewBox="0 0 26 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.5 2C13.9264 2 24 12.0736 24 24.5C24 30.524 21.6326 35.9951 17.7775 40.0337C16.8686 40.9858 15.8771 41.8582 14.8145 42.6395C11.0863 45.3806 6.48226 47 1.5 47" stroke="#6BBD45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+                <div>
+                    <div class="slider-card">
+                        <div class="slider-card__header territories__card-header">
+                            <div class="slider-card__header-circle_white">
+                                <div class="slider-card__header-icon">
+                                </div>
+                            </div>
+                            <div class="slider-card__header-name ">
+                                Альпийская долина
+                            </div>
+                        </div>
+        
+                        <div class="slider-card__content">
+                            <div class="slider-card__content-description">
+                                с. Кулига, 25 км по Ирбитскому тракту, уникальный природный ландшафт
+                            </div>
+                            <div class="slider-card__content-info">
+                                <div class="slider-card__info-element">
+                                    <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.2857 6.18701H0V17.1861H14.2857V6.18701Z" fill="#7EC95C">
+                                        </path>
+                                        <path d="M9.28571 10.9991C9.28571 9.86003 8.32643 8.9368 7.14286 8.9368C5.95929 8.9368 5 9.86003 5 10.9991C5 11.9045 5.61 12.6655 6.45357 12.9425C6.44571 12.9824 6.42857 13.0195 6.42857 13.0614V14.4363C6.42857 14.8158 6.74857 15.1237 7.14286 15.1237C7.53714 15.1237 7.85714 14.8158 7.85714 14.4363V13.0614C7.85714 13.0195 7.84 12.9824 7.83214 12.9425C8.67571 12.6655 9.28571 11.9045 9.28571 10.9991Z" fill="#48AD19">
+        
+                                        </path>
+                                        <path d="M3.57142 4.8121C3.57142 2.91682 5.17357 1.37489 7.14285 1.37489C9.11214 1.37489 10.7143 2.91682 10.7143 4.8121V6.18699H12.1429V4.8121C12.1429 2.15857 9.9 0 7.14285 0C4.38571 0 2.14285 2.15857 2.14285 4.8121V6.18699H3.57142V4.8121Z" fill="#48AD19">
+        
+                                        </path>
+                                    </svg>
+                                    <span>618 продано</span>
+                                </div>
+                                <div class="slider-card__info-element">
+                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.79217 7.97784H6.49347C4.13439 7.13415 2.59738 5.15529 2.59738 2.961V1.01001H11.6883V2.961C11.6883 5.15529 10.1513 7.13415 7.79217 7.97784Z" fill="#7EC95C">
+        
+                                        </path>
+                                        <path d="M6.49347 7.97708H7.79217C10.1513 8.82078 11.6883 10.7997 11.6883 12.994V14.945H2.59738V12.994C2.59738 10.7997 4.13439 8.82078 6.49347 7.97708Z" fill="#7EC95C">
+        
+                                        </path>
+                                        <path d="M0.649351 1.59015H1.2987H2.5974H13.6364C13.9955 1.59015 14.2857 1.32995 14.2857 1.00935C14.2857 0.688755 13.9955 0.428558 13.6364 0.428558H2.5974H1.2987H0.649351C0.29026 0.428558 0 0.688755 0 1.00935C0 1.32995 0.29026 1.59015 0.649351 1.59015Z" fill="#48AD19">
+        
+                                        </path>
+                                        <path d="M13.6357 14.3632H1.9474C1.94545 14.3632 1.9435 14.3644 1.94091 14.3644H0.64935C0.29026 14.3644 0 14.6246 0 14.9452C0 15.2658 0.29026 15.526 0.64935 15.526H2.5974C2.59935 15.526 2.6013 15.5248 2.60389 15.5248H13.6357C13.9948 15.5248 14.2851 15.2646 14.2851 14.944C14.2851 14.6234 13.9948 14.3632 13.6357 14.3632Z" fill="#48AD19">
+                                        </path>
+                                    </svg>
+                                    <span>8 забронировано</span>
+                                </div>
+                                <div class="slider-card__info-element">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="7.14286" cy="7.85715" r="7.14286" fill="#7EC95C">
+        
+                                        </circle>
+                                        <path d="M7.60502 3.57144H6.59663V11.0232H7.60502V3.57144Z" fill="#48AD19">
+        
+                                        </path>
+                                        <path d="M7.10084 11.4889L3.57144 8.41172L4.31564 7.76297L7.10084 10.1914L9.88604 7.76297L10.6302 8.41172L7.10084 11.4889Z" fill="#48AD19">
+        
+                                        </path>
+                                    </svg>
+                                    <span>233 доступно</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="slider-card__footer territories__card-footer">
+                            <div class="slider-card__content-description">
+                                Участки от 10 до 12 соток
+                            </div>
+        
+                            <div class="slider-card__button-wrapper">
+                                <svg class="arrow-link__arrow" width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.2071 8.20711C18.5976 7.81658 18.5976 7.18342 18.2071 6.79289L11.8431 0.428932C11.4526 0.0384078 10.8195 0.0384078 10.4289 0.428932C10.0384 0.819457 10.0384 1.45262 10.4289 1.84315L16.0858 7.5L10.4289 13.1569C10.0384 13.5474 10.0384 14.1805 10.4289 14.5711C10.8195 14.9616 11.4526 14.9616 11.8431 14.5711L18.2071 8.20711ZM0.5 8.5L17.5 8.5V6.5L0.5 6.5L0.5 8.5Z" fill="#6BBD45 ">
+                                    </path>
+                                </svg>
+                                <div class="slider-card__button">
+                                    <svg viewBox="0 0 26 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.5 2C13.9264 2 24 12.0736 24 24.5C24 30.524 21.6326 35.9951 17.7775 40.0337C16.8686 40.9858 15.8771 41.8582 14.8145 42.6395C11.0863 45.3806 6.48226 47 1.5 47" stroke="#6BBD45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="territories__map-wrapper">
+                <div class="territories__map" id="myMapId" style="width:500px; height:400px"></div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="select-place section-form">
+        <div class="top-line__wrapper">
+            <div class="top-line">
+                <div class="line">
+
+                </div>
+            </div>
+        </div>
+        <div class="select-palce__form-wrapper">
+            <div class="select-place__form-wrapper-inner">
+                <form class="select-place__form" action="#">
+                    <h2 class="select-place__form-heading">
+                        Выберите свой участок
+                    </h2>
+                    <div class="form__elements">
+
+                        <div class="select-place__cost">
+                            <h4 class="select-place__cost-heading">
+                                Стоимость
+                            </h4>
+                            <div id="slider" class="select-place__cost-slider">
+                                
+                            </div>
+                            <div class="slider-values">
+                                <span class="select-place__cost-left-number">0 ₽</span>
+                                <span class="select-place__cost-right-number">2 800 000 ₽</span>
+                            </div>
+                        </div>
+                        <div class="select-place__size">
+                            <h4 class="select-place__size-heading">
+                                Размер участка
+                            </h4>
+                            <div id="slider" class="select-place__size-slider">
+                                
+                            </div>
+                            <div class="slider-values">
+                                <span class="select-place__size-left-number">5 соток</span>
+                                <span class="select-place__size-right-number">15 соток</span>
+                            </div>
+                        </div>
+                        <button class="green-button select-place__button">
+                            Подобрать участок
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="bottom-line__wrapper">
+            <div class="bottom-line">
+                <div class="line">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-company">
+        <h2 class="about-company__heading">
+            О компании
+        </h2>
+        <div class="about-company__content">
+            <div class="about-company__content-element about-company__content-element_first">
+                <img class="about-company__slider-picture" src="./img/company-building.png" alt="">
+                <img class="about-company__slider-picture" src="./img/company-building.png" alt="">
+                <img class="about-company__slider-picture" src="./img/company-building.png" alt="">
+                <img class="about-company__slider-picture" src="./img/company-building.png" alt="">
+            </div>
+            <div class="about-company__content-element about-company__content-element_second">
+                <h4 class="about-company__element-heading about-company__element-heading_second">
+                    Более 8 лет на рынке
+                </h4>
+                <span class="about-company__element-span about-company__element-span_second">
+                    Девелоперская компания «Навигатор» осуществляет продажу земельных участков с готовыми коммуникациями в коттеджных поселках города Тюмени 
+                </span>
+            </div>
+            <div class="about-company__content-element about-company__content-element_third">
+                <h4 class="about-company__element-heading about-company__element-heading_third">
+                    Профессиональная юридическая поддержка
+                </h4>
+                <span class="about-company__element-span about-company__element-span_third">Гарант юридической чистоты сделки</span>
+            </div>
+            <div class="about-company__content-element about-company__content-element_fourth">
+                <h4 class="about-company__element-heading about-company__element-heading_fourth">
+                    Собственная <span>обслуживающая компания</span>
+                </h4>
+                <span class="about-company__element-span about-company__element-span_fourth">
+                    Круглый год следит за чистотой и порядком в поселках 
+                </span>
+            </div>
+            <div class="about-company__content-element about-company__content-element_fivth">
+                <h4 class="about-company__element-heading about-company__element-heading_fivth">
+                    Удобное расположение 
+                </h4>
+                <span class="about-company__element-span about-company__element-span_fivth">
+                    Земельные участки расположенны на популярных трактах города в экологически чистых районах.
+                </span>
+            </div>
+            <div class="about-company__content-element about-company__content-element_sixth">
+                <h4 class="about-company__element-heading about-company__element-heading_sixth">
+                    Уникальные места
+                </h4>
+                <span class="about-company__element-span about-company__element-span_sixth">
+                    Каждый поселок имеет свою концепцию и отличие.
+                    Вы сможете купить земельный участок на берегу реки, рядом с лесом, на холмах или выбрать отличный видовой участок
+                </span>
+            </div>
+        </div>
+        <div class="about-company__mobile-plates">
+            <div class="about-company__content-element about-company__content-element_second">
+                <h4 class="about-company__element-heading about-company__element-heading_second">
+                    Более 8 лет на рынке
+                </h4>
+                <span class="about-company__element-span about-company__element-span_second">
+                    Девелоперская компания «Навигатор» осуществляет продажу земельных участков с готовыми коммуникациями в коттеджных поселках города Тюмени 
+                </span>
+            </div>
+            <div class="about-company__content-element about-company__content-element_third">
+                <h4 class="about-company__element-heading about-company__element-heading_third">
+                    Профессиональная юридическая поддержка
+                </h4>
+                <span class="about-company__element-span about-company__element-span_third">Гарант юридической чистоты сделки</span>
+            </div>
+            <div class="about-company__content-element about-company__content-element_fourth">
+                <h4 class="about-company__element-heading about-company__element-heading_fourth">
+                    Собственная <span>обслуживающая компания</span>
+                </h4>
+                <span class="about-company__element-span about-company__element-span_fourth">
+                    Круглый год следит за чистотой и порядком в поселках 
+                </span>
+            </div>
+            <div class="about-company__content-element about-company__content-element_fivth">
+                <h4 class="about-company__element-heading about-company__element-heading_fivth">
+                    Удобное расположение 
+                </h4>
+                <span class="about-company__element-span about-company__element-span_fivth">
+                    Земельные участки расположенны на популярных трактах города в экологически чистых районах.
+                </span>
+            </div>
+            <div class="about-company__content-element about-company__content-element_sixth">
+                <h4 class="about-company__element-heading about-company__element-heading_sixth">
+                    Уникальные места
+                </h4>
+                <span class="about-company__element-span about-company__element-span_sixth">
+                    Каждый поселок имеет свою концепцию и отличие.
+                    Вы сможете купить земельный участок на берегу реки, рядом с лесом, на холмах или выбрать отличный видовой участок
+                </span>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="buy-place">
+        <h2 class="buy-place__heading">      
+            Купить участок просто
+        </h2>   
+        <div class="buy-place__tabs-navigation tabs-navigation">
+            <div class="green-background">
+
+            </div>
+            <div class="buy-place__tab tabs-navigation__tab tabs-navigation__tab_active">
+                Этапы покупки
+            </div>
+            <div class="buy-place__tab tabs-navigation__tab">
+                Рассрочка
+            </div>
+            <div class="buy-place__tab tabs-navigation__tab">
+                Ипотека
+            </div>
+        </div>
+        <div class="steps__wrapper buy-place__steps-wrapper active">
+            <div class="steps buy-place__steps active">
+                <div class="step buy-place__step">
+                    <div class="step__number">
+                        1
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/432/1.svg" alt="" srcset="">
+                        </div>
+                        <div class="step__line">
+                            
+                        </div>
+                    </div>
+                    <div class="step__description">
+                        Оставьте заявку на обратный звонок
+                    </div>
+                </div>
+                <div class="step buy-place__step">
+                    <div class="step__number">
+                        2
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/022/2.svg" alt="" srcset="">
+                        </div>
+                        <div class="step__line">
+                            
+                        </div>
+                    </div>
+                    <div class="step__description">
+                        Мы позвоним и пригласим вас на экскурсию или в офис
+                    </div>
+                    
+                </div>
+
+                <div class="step buy-place__step">
+                    <div class="step__number">
+                        3
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/e17/3.svg" alt="" srcset="">
+                        </div>
+                        <div class="step__line">
+                            
+                        </div>
+                    </div>
+                    <div class="step__description">
+                        Выберем с вами удобный способ оплаты
+                    </div>
+                </div>
+
+                <div class="step buy-place__step">
+                    <div class="step__number">
+                        4
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/d5a/4.svg" alt="" srcset="">
+                        </div>
+                        <div class="step__line" style="display: none;">
+                                
+                        </div>
+                    </div>
+                    
+                    <div class="step__description">
+                        Участок ваш!
+                    </div>
+                    
+                </div>
+            </div>
+        <div>
+        <div class="steps__wrapper">
+            <div class="steps active">
+                <div class="step">
+                    <div class="step__number">
+                        1
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/432/1.svg" alt="" srcset="">
+                        </div>
+                        <div class="step__line">
+                            
+                        </div>
+                    </div>
+                    <div class="step__description">
+                        Оставьте заявку на обратный звонок
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number">
+                        2
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/022/2.svg" alt="" srcset="">
+                        </div>
+                        <div class="step__line">
+                            
+                        </div>
+                    </div>
+                    <div class="step__description">
+                        Мы позвоним и пригласим вас на экскурсию или в офис
+                    </div>
+                    
+                </div>
+
+                <div class="step">
+                    <div class="step__number">
+                        3
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/e17/3.svg" alt="" srcset="">
+                        </div>
+                        <div class="step__line">
+                            
+                        </div>
+                    </div>
+                    <div class="step__description">
+                        Выберем с вами удобный способ оплаты
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step__number">
+                        4
+                    </div>
+                    <div class="step__logo">
+                        <img src="https://navigator-tmn.ru/upload/iblock/d5a/4.svg" alt="" srcset="">
+                    </div>
+                    <div class="step__description">
+                        Участок ваш!
+                    </div>
+                </div>
+            </div>
+        <div>
+        <div class="steps__wrapper">
+            <div class="steps active">
+                <div class="step">
+                    <div class="step__number">
+                        1
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/432/1.svg" alt="" srcset="">
+                        </div>
+                        <div class="step__line">
+                            
+                        </div>
+                    </div>
+                    <div class="step__description">
+                        Оставьте заявку на обратный звонок
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number">
+                        2
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/022/2.svg" alt="" srcset="">
+                        </div>
+                        <div class="step__line">
+                            
+                        </div>
+                    </div>
+                    <div class="step__description">
+                        Мы позвоним и пригласим вас на экскурсию или в офис
+                    </div>
+                    
+                </div>
+
+                <div class="step">
+                    <div class="step__number">
+                        3
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/e17/3.svg" alt="" srcset="">
+                        </div>
+                        <div class="step__line">
+                            
+                        </div>
+                    </div>
+                    <div class="step__description">
+                        Выберем с вами удобный способ оплаты
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step__number">
+                        4
+                    </div>
+                    <div class="step__logo">
+                        <img src="https://navigator-tmn.ru/upload/iblock/d5a/4.svg" alt="" srcset="">
+                    </div>
+                    <div class="step__description">
+                        Участок ваш!
+                    </div>
+                </div>
+            </div>
+        <div>
+        
+    </section>
+
+
+    <section class="get-appointment">
+        <div class="top-line__wrapper">
+            <div class="top-line">
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="get-appointment__content-wrapper">
+            <div class="get-appointment__form-wrapper">
+                <form class="get-appointment__form" action="#">
+                    <div class="get-appointment__form-text">
+                        <h2 class="get-appointment__form-heading">
+                            Запишитесь на просмотр
+                        </h2>
+                        <span class="get-appointment__form-span">
+                            Эксперт по недвижимости быстро подберет вам подходящий вариант земельного участка. А еще проведёт вам экскурсию по счастливой загородной жизни. 
+                        </span>
+                    </div>
+
+                    <div class="get-appointment__form-elements">
+                        <div class="get-appointment__name-wrapper get-appointment__input-wrapper">
+                            <input class="get-appointment__name get-appointment__input" name="name" placeholder="Имя">
+                        </div>
+                        <div class="get-appointment__phone-wrapper get-appointment__input-wrapper">
+                            <input class="input__phone get-appointment__input phone" name="phone" placeholder="Телефон">
+                        </div>
+                        <button class="get-appointment__button green-button">
+                            Записаться
+                        </button>
+                        <div class="get-appointment__checkbox-wrapper">
+                            <input type="checkbox" name="" id="" class="get-appointment__checkbox">
+                            <span class="get-appointment__checkbox-description">Подтверждаю согласие с <b>политикой обработки персональных данных</b></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bottom-line__wrapper">
+            <div class="bottom-line">
+                <div class="line">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="why-us">
+        <h2 class="why-us__heading">
+            Почему выбирают земельные участки у нас?
+        </h2>
+        <div class="why-us__plates">
+            <div class="why-us__first-plate why-us__plate">
+                <h4 class="why-us__first-heading">Газ 4м³</h4>
+                <img class="why-us__first-img" src="https://navigator-tmn.ru/upload/iblock/a85/1.svg" alt="" srcset="">
+            </div>
+            <div class="why-us__second-plate why-us__plate">
+                <h3 class="why-us__second-heading">Уличное освещение</h3>
+            </div>
+            <div class="why-us__third-plate why-us__plate">
+                <h3 class="why-us__third-heading">Дороги</h3>
+            </div>
+            <div class="why-us__fourth-plate why-us__plate">
+                <h3 class="why-us__fourth-heading">
+                    Инфраструктура
+                </h3>   
+                <img class="why-us__fourth-img" src="https://navigator-tmn.ru/upload/iblock/838/2.svg" alt="" srcset="">
+            </div>
+            <div class="why-us__fivth-plate why-us__plate">
+                <div class="why-us__slick-slider">
+                    <div class="loyality__top why-us__slider-content">
+                        <div class="text__wrapper">
+                            <h3 class="why-us__slider-content-heading">
+                                Программа "Лояльный покупатель"
+                            </h3>
+                            <span class="why-us__slider-content-span">
+                                Дарим скидку 10% при 100% оплате земельного участка в любом из наших коттеджных поселков
+                            </span>
+                        </div>
+                        <img src="./img/discount.png" alt="">
+                    </div>
+                    <div class="loyality__top why-us__slider-content">
+                        <div class="text__wrapper">
+                            <h3 class="why-us__slider-content-heading">
+                                Программа "Лояльный покупатель"
+                            </h3>
+                            <span class="why-us__slider-content-span">
+                                Дарим скидку 10% при 100% оплате земельного участка в любом из наших коттеджных поселков
+                            </span>
+                        </div>
+                        <img src="./img/discount.png" alt="">
+                    </div>
+                    <div class="loyality__top why-us__slider-content">
+                        <div class="text__wrapper">
+                            <h3 class="why-us__slider-content-heading">
+                                Программа "Лояльный покупатель"
+                            </h3>
+                            <span class="why-us__slider-content-span">
+                                Дарим скидку 10% при 100% оплате земельного участка в любом из наших коттеджных поселков
+                            </span>
+                        </div>
+                        <img src="./img/discount.png" alt="">
+                    </div>
+                </div>
+                <div class="why-us__slider-navigation">
+                    <div class="why-us__arrows-container arrows-container">
+
+                    <div class="why-us__dots-container"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="why-us__sixth-plate why-us__plate">
+                <h3 class="why-us__sixth-heading">
+                    Электричество 10-15 кВт
+                </h3>
+            </div>
+            <div class="why-us__seventh-plate why-us__plate">
+                <h4 class="why-us__seventh-heading">
+                   
+                </h4>
+                <span>
+                   
+                </span>
+            </div>
+
+        </div>
+
+        <div class="why-us__mobile-plates">
+            <div class="why-us__first-plate why-us__mobile-plate">
+                <h4 class="why-us__first-heading">Газ 4м³</h4>
+                <img class="why-us__first-img" src="https://navigator-tmn.ru/upload/iblock/a85/1.svg" alt="" srcset="">
+            </div>
+            <div class="why-us__second-plate why-us__mobile-plate">
+                <h3 class="why-us__second-heading">Уличное освещение</h3>
+            </div>
+            <div class="why-us__third-plate why-us__mobile-plate">
+                <h3 class="why-us__third-heading">Дороги</h3>
+            </div>
+            <div class="why-us__fourth-plate why-us__mobile-plate">
+                <h3 class="why-us__fourth-heading">
+                    Инфраструктура
+                </h3>
+                <img class="why-us__fourth-img" src="https://navigator-tmn.ru/upload/iblock/838/2.svg" alt="" srcset="">
+            </div>
+        </div>
+
+        <div class="why-us__mobile-plates-bottom">
+            <div class="why-us__mobile-bottom-cards">
+                <div class="why-us__mobile-bottom-card">
+                    <div class="why-us__mobile-bottom-text">
+                        <h3 class="why-us__mobile-bottom-heading">
+                            Программа «Лояльный покупатель»
+                        </h3>
+                        <span class="why-us__mobile-bottom-span">
+                            Дарим скидку 10% при 100% оплате земельного участка в любом из наших коттеджных поселков
+                        </span>
+                    </div>
+                    <img class="why-us__mobile-bottom-img" src="./img/discount.png" alt="">
+                </div>
+                <div class="why-us__mobile-bottom-card">
+                    <div class="why-us__mobile-bottom-text">
+                        <h3 class="why-us__mobile-bottom-heading">
+                            Программа «Лояльный покупатель»
+                        </h3>
+                        <span class="why-us__mobile-bottom-span">
+                            Дарим скидку 10% при 100% оплате земельного участка в любом из наших коттеджных поселков
+                        </span>
+                    </div>
+                    <img class="why-us__mobile-bottom-img" src="./img/discount.png" alt="">
+                </div>
+                <div class="why-us__mobile-bottom-card">
+                    <div class="why-us__mobile-bottom-text">
+                        <h3 class="why-us__mobile-bottom-heading">
+                            Программа «Лояльный покупатель»
+                        </h3>
+                        <span class="why-us__mobile-bottom-span">
+                            Дарим скидку 10% при 100% оплате земельного участка в любом из наших коттеджных поселков
+                        </span>
+                    </div>
+                    <img class="why-us__mobile-bottom-img" src="./img/discount.png" alt="">
+                </div>
+            </div>
+
+            <div class="why-us__mobile-bottom-button green-button">
+                Подобрать участок
+            </div>
+            
+
+            <!-- <div class="why-us__mobile-bottom-navigation">
+                <div class="why-us__mobile-bottom-dots-container">
+                    
+                </div>
+            </div> -->
+        </div>
+
+    </section>
+
+
+    <section class="questions">
+        <div class="questions__inner-wrapper">
+            <div class="questions__text">
+                <h2 class="questions__text-heading">Появились вопросы?</h2>
+                <span class="questions__text-span">Оставьте свой телефон и мы свяжемся с вами</span>
+            </div>
+            <form class="questions__form" action="#">
+                <div class="questions__name-wrapper questions__input-wrapper">
+                    <input type="text" class="questions__name questions__input" placeholder="Имя">
+                </div>
+                <div class="questions__phone-wrapper questions__input-wrapper">
+                    <input type="text" class="questions__phone questions__input phone" placeholder="Телефон">
+                </div>
+                <div class="questions__button-wrapper">
+                    <button class="questions__button green-button">
+                        Отправить
+                    </button>
+                </div>
+                <div class="questions__checkbox-wrapper">
+                    <input type="checkbox" name="" id="" class="questions__checkbox">
+                    <label class="questions__checkbox-label">Подтверждаю согласие с <b>политикой обработки персональных данных</b></label>
+                </div>
+            </form>
+        </div>
+        <div class="questions__bottom-line">
+            <div class="questions__bottom-line_blue">
+
+            </div>
+            <div class="questions__bottom-line_gradient">
+
+            </div>
+            <div class="questions__bottom-line_green">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <h2 class="news__heading">
+            А что у нас нового?
+        </h2>
+        <div class="news__navigation-wrapper">
+            <div class="news__tabs-navigation tabs-navigation">
+                <div class="green-background">
+
+                </div>
+                <div class="news__tab news__tab-news tabs-navigation__tab tabs-navigation__tab_active">
+                    Новости
+                </div>
+                <div class="news__tab news__tab-residents-stories tabs-navigation__tab">
+                    Истории жителей
+                </div>
+                <div class="news__tab news__tab-useful-topics tabs-navigation__tab">
+                    Полезные статьи
+                </div>
+            </div>
+
+            <div class="arrow-slider news__arrow-slider arrow-slider__points-4">
+                <div class="news__arrows-container arrows-container"></div>
+            </div>
+            <div class="arrow-slider news__arrow-slider arrow-slider__points-4">
+                <div class="news__arrows-container arrows-container"></div>
+            </div>
+        </div>
+
+        <div class="slider-cards news__slick-slider news__cards">
+            <div class="slider-card">
+                <div class="slider-card__header news__card-header">
+                    
+                </div>
+                <div class="slider-card__content news__card-content">
+                    <h3 class="news__card-heading">
+                        Итоги зимнего праздника в «Альпийской долине»
+                    </h3>
+                    <div class="slider-card__content-description">
+                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                    </div>
+                </div>
+                <div class="slider-card__footer news__footer">
+                    <a class="news__footer-link" href="">Читать далее</a>
+                    <span class="news__footer-span">4.03.2019</span>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="slider-card__header news__card-header">
+                    
+                </div>
+                <div class="slider-card__content news__card-content">
+                    <h3 class="news__card-heading">
+                        Итоги зимнего праздника в «Альпийской долине»
+                    </h3>
+                    <div class="slider-card__content-description">
+                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                    </div>
+                </div>
+                <div class="slider-card__footer news__footer">
+                    <a class="news__footer-link" href="">Читать далее</a>
+                    <span class="news__footer-span">4.03.2019</span>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="slider-card__header news__card-header">
+                    
+                </div>
+                <div class="slider-card__content news__card-content">
+                    <h3 class="news__card-heading">
+                        Итоги зимнего праздника в «Альпийской долине»
+                    </h3>
+                    <div class="slider-card__content-description">
+                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                    </div>
+                </div>
+                <div class="slider-card__footer news__footer">
+                    <a class="news__footer-link" href="">Читать далее</a>
+                    <span class="news__footer-span">4.03.2019</span>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="slider-card__header news__card-header">
+                    
+                </div>
+                <div class="slider-card__content news__card-content">
+                    <h3 class="news__card-heading">
+                        Итоги зимнего праздника в «Альпийской долине»
+                    </h3>
+                    <div class="slider-card__content-description">
+                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                    </div>
+                </div>
+                <div class="slider-card__footer news__footer">
+                    <a class="news__footer-link" href="">Читать далее</a>
+                    <span class="news__footer-span">4.03.2019</span>
+                </div>
+            </div>
+        </div>
+        <div class="slider-cards news__residents-stories">
+            <div class="slider-card">
+                <div class="slider-card__header news__card-header">
+                    
+                </div>
+                <div class="slider-card__content news__card-content">
+                    <h3 class="news__card-heading">
+                        asdfasdfsdafsadfsadfsadfsaf
+                    </h3>
+                    <div class="slider-card__content-description">
+                        asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+                    </div>
+                </div>
+                <div class="slider-card__footer news__footer">
+                    <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
+                    <span class="news__footer-span">4.03.2019</span>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="slider-card__header news__card-header">
+                    
+                </div>
+                <div class="slider-card__content news__card-content">
+                    <h3 class="news__card-heading">
+                        Итоги зимнего праздника в «Альпийской долине»
+                    </h3>
+                    <div class="slider-card__content-description">
+                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                    </div>
+                </div>
+                <div class="slider-card__footer news__footer">
+                    <a class="news__footer-link" href="">Читать далее</a>
+                    <span class="news__footer-span">4.03.2019</span>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="slider-card__header news__card-header">
+                    
+                </div>
+                <div class="slider-card__content news__card-content">
+                    <h3 class="news__card-heading">
+                        Итоги зимнего праздника в «Альпийской долине»
+                    </h3>
+                    <div class="slider-card__content-description">
+                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                    </div>
+                </div>
+                <div class="slider-card__footer news__footer">
+                    <a class="news__footer-link" href="">Читать далее</a>
+                    <span class="news__footer-span">4.03.2019</span>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="slider-card__header news__card-header">
+                    
+                </div>
+                <div class="slider-card__content news__card-content">
+                    <h3 class="news__card-heading">
+                        Итоги зимнего праздника в «Альпийской долине»
+                    </h3>
+                    <div class="slider-card__content-description">
+                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                    </div>
+                </div>
+                <div class="slider-card__footer news__footer">
+                    <a class="news__footer-link" href="">Читать далее</a>
+                    <span class="news__footer-span">4.03.2019</span>
+                </div>
+            </div>
+        </div>
+        <div class="news__useful-topics">
+            ma unde officia voluptas ipsum illo eaque porro vel commodi explicabo quam ullam temporibus, non sit perferendis aperiam velit reiciendis, libero error.
+            icabo commodi cum saepe. Fuga reiciendis consectetur, deleniti ex possimus blanditiis ad repellendus quisquam quaerat, praesentium modi eos assumenda eius esse ipsum ducimus neque aut soluta!
+            In, quam. Dolorem possimus eius explicabo officiis dignissimos laudantium error assumenda eum, a ab illum, rerum consectetur voluptatum totam quam exercitationem at cumque voluptates magni nisi adipisci debitis est eligendi!
+            Totam fugiat dolor recusandae, laborum facilis in! Quaerat delectus id perspiciatis. Fugit optio nihil veritatis quibusdam incidunt eligendi est ipsa maiores qui, consequatur, sed minus. Laborum nihil aliquam suscipit aliquid?
+            Sed reprehenderit eius sit, obcaecati reiciendis rem omnis! Nostrum, inventore eum placeat voluptate iure, quasi voluptates ratione totam praesentium fugiat architecto suscipit in ut fuga asperiores provident. Animi, nemo ab.
+        </div>
+
+    </section>
+    
+
+
+
+    <footer class="page-footer">
+        <div class="mailing">
+            <div class="mailing__inner-wrapper">
+                <img class="mailing__img" src="img/mail.png" alt="">
+                <span class="mailing__span">
+                    Подписывайтесь на новости и акции:
+                </span>
+                <form class="mailing__form" action="#">
+                    <input placeholder="Email" class="mailing__form-input" type="text">
+                    <button class="mailing__form-button green-button">
+                        Подписаться
+                    </button>
+                    <div class="mailing__checkbox-wrapper">
+                        <input type="checkbox" name="" class="mailing__checkbox">
+                        <label class="mailing__label">
+                            Подтверждаю согласие с <span>политикой обработки персональных данных</span>
+                        </label>
+                    </div>
+                </form>
+                <div class="social-media-icons">
+                    <img src="img/facebook.png" alt="" srcset="">
+                    <img src="img/vk.png" alt="" srcset="">
+                    <img src="img/instagram.png" alt="" srcset="">
+                    <img src="img/youtube.png" alt="" srcset="">
+                    <img src="img/odnoclassniki.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+        <div class="page-footer__top">
+            <div class="page-footer__top-first-column page-footer__top-column">
+                <a href="">Коттеджные поселки</a>
+                <a href="">Альпийская долина</a>
+                <a href="">Есенино</a>
+                <a href="">Ёлки</a>
+                <a href="./selectPlace.html">Выбрать участок</a>
+                <a href="">Отзывы</a>
+            </div>
+            <div class="page-footer__top-second-column page-footer__top-column">
+                <a href="">О компании</a>
+                <a href="">Новости</a>
+                <a href="">Полезные статьи</a>
+                <a href="">Истории жителей</a>
+                <a href="">Тендеры</a>
+                <a href="">Вакансии</a>
+            </div>
+            <div class="page-footer__top-third-column page-footer__top-column">
+                <a href="">Покупателям</a>
+                <a href="">Рассрочка</a>
+                <a href="">Ипотека</a>
+                <a href="">Цены</a>
+                <a href="">Лояльный покупатель</a>
+                <a href="">Обслуживающая компания</a>
+            </div>
+            <div class="page-footer__top-fourth-column page-footer__top-column">
+                <div class="page-footer__contacts-title">
+                    <span>Наши контакты</span>
+                </div>
+                <div class="page-footer__phone">
+                    <div class="page-footer__phone-img-wrapper">
+                        <img class="page-footer__phone-img" src="./img/phone.png" alt="">
+                    </div>
+                    <div class="page-footer__phone-content">
+                        <div class="page-footer__phone-content-element">+ 7 (3452) 546-276</div>
+                        <div class="page-footer__phone-content-element">Офис Пн - Пт: 9:00-18:00</div>
+                        <div class="page-footer__phone-content-element">Call-центр работает ежедневно с 9:00-20:00</div>
+                    </div>
+                </div>
+                <div class="page-footer__location">
+                    <div class="page-footer__location-img-wrapper">
+                        <img src="./img/location.png" alt="" class="page-footer__location-img">
+                    </div>
+                    <div class="page-footer__location-content">
+                        <div class="page-footer__location-address">г. Тюмень, ул. Семакова, 2/1</div>
+                        <a class="page-footer__location-content-link" href="">схема проезда</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="page-footer__bottom">
+            <div class="page-footer__bottom-first-row">
+                2012 - 2019. ООО «Навигатор. Управление активами»
+            </div>
+            <div class="page-footer__bottom-second-row">
+                <span>
+                    2019 Навигатор по загородной недвижимости
+                </span>
+                <span>
+                    <u>Политика конфиденциальности</u>
+                </span>
+                <div>
+                    <span>
+                        Разработано 
+                    </span>
+                    <img src="img/iq-dev white.png" alt="">
+                </div>
+            </div>
+            <div class="page-footer__bottom-third-row">
+                Обращаем Ваше внимание на то, что данный сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не являются публичной офертой. Девелоперская компания "Навигатор" имеет право изменять стоимость объектов.  
+            </div>
+        </div>
+    </footer>
+
+
+   
+    <script src="JQuery.js"></script>
+    <script src="jquery-ui-1.13.0/jquery-ui.min.js"></script>
+    <script src="./slick-1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="http://maps.api.2gis.ru/1.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
