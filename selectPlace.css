@@ -922,6 +922,134 @@ td {
 
 
 
+/* Attention */
+
+.attention {
+    width: 66%;
+    transition: .5s;
+    
+}
+
+.attention__advice {
+    transition: .5s;
+}
+
+.attention__heading {
+    margin: 50px 0;
+    font-size: 36px;
+    line-height: 44px;
+    color: #675A54;
+    width: 50%;
+    transition: .5s;
+
+}
+
+.attention__advice-heading {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #675A54;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+
+}
+
+
+.attention__advice-description {
+    font-size: 13px;
+    line-height: 16px;
+    color: #675A54;
+    margin-left: 77px;
+    padding-bottom: 57px;
+    transition: .5s;
+
+
+}
+
+.attention__advices {
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    box-sizing: border-box;
+    transition: .5s;
+
+}
+
+
+.attention__advice:nth-child(2n) {
+    background-color: #F3EFED;
+    transition: .5s;
+
+}
+
+.attention__advice-line-wrapper {
+    margin: 15px 0 30px 77px;
+    height: 1px;
+    transition: .5s;
+
+}
+
+.attention__advice-line {
+    height: 1px;
+    background-color: #D1D1D1;
+    width: 60%;
+    margin-right: auto;
+    transition: .5s;
+
+}
+
+.attention__arrow-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6BBD45;
+    border: 2px solid #6BBD45;
+    border-radius: 50%;
+    width: 29px;
+    height: 29px;
+    margin-right: 30px;
+    transition: .5s;
+}
+
+
+
+
+/* Deal offer */
+
+.deal-offer {
+    margin-top: 100px;
+    width: 66%;
+    display: flex;
+    
+}
+
+.deal-offer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.deal-offer__heading {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #675A54;
+}
+
+.deal-offer__text {
+    font-weight: normal;
+    width: 70%;
+    font-size: 14px;
+    line-height: 19px;
+    color: #675A54;
+}
+
+.deal-offer__button {
+    width: 251px;
+    height: 50px;
+}
+
 
 
 /* 1670px size */
