@@ -2081,7 +2081,6 @@ color: #392424;
 } 
 
 .news__residents-stories, .news__useful-topics {
-    display: none;
     min-height: 500px;
     margin-bottom: 30px;
     margin-top: 50px;
@@ -3211,9 +3210,11 @@ a.page-footer__location-content-link{
     }
 }
 
+
+/* 
 .slider-cards.active {
     display: block !important;
 }
 .slider-cards {
     display: none !important;
-}
+} */

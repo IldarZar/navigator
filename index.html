@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+
+    <script src="JQuery.js"></script>
+    <script src="jquery-ui-1.13.0/jquery-ui.min.js"></script>
+    <script src="./slick-1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="http://maps.api.2gis.ru/1.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="script.js"></script>
+
+
+
     <link rel="stylesheet" href="style.css">
 
     
@@ -1260,224 +1272,276 @@
             </div>
 
 
-            <div class="stories-containe arrow-slider residents-stories__arrow-slider arrow-slider__points-4">
-                <div class="stories-arrows residents-stories__arrows-container arrows-container"></div>
+            <div class="stories-container arrow-slider residents-stories__arrow-slider arrow-slider__points-4">
+                <div class="stories-arrow residents-stories__arrows-container arrows-container"></div>
             </div>
 
-            <div class="topics-container  arrow-slider useful-topics__arrow-slider arrow-slider__points-4">
-                <div class=" topics-arrows useful-topics__arrows-container arrows-container"></div>
+            <div class="topics-container arrow-slider useful-topics__arrow-slider arrow-slider__points-4">
+                <div class=" topics-arrow useful-topics__arrows-container arrows-container"></div>
             </div>
         </div>
 
-        <div class="slider-cards news__slick-slider news__cards   slider-news active" data-class="news">
-            <div class="slider-card">
-                <div class="slider-card__header news__card-header">
+        <div class="slider-cards news__slick-slider news__cards slider-news active" data-class="news">
+            
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
                     
-                </div>
-                <div class="slider-card__content news__card-content">
-                    <h3 class="news__card-heading">
-                        Итоги зимнего праздника в «Альпийской долине»
-                    </h3>
-                    <div class="slider-card__content-description">
-                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                    </div>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            Итоги зимнего праздника в «Альпийской долине»
+                        </h3>
+                        <div class="slider-card__content-description">
+                            Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">Читать далее</a>
+                        <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
-                <div class="slider-card__footer news__footer">
-                    <a class="news__footer-link" href="">Читать далее</a>
-                    <span class="news__footer-span">4.03.2019</span>
-                </div>
             </div>
-            <div class="slider-card">
-                <div class="slider-card__header news__card-header">
-                    
-                </div>
-                <div class="slider-card__content news__card-content">
-                    <h3 class="news__card-heading">
-                        Итоги зимнего праздника в «Альпийской долине»
-                    </h3>
-                    <div class="slider-card__content-description">
-                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
+                    </div>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            Итоги зимнего праздника в «Альпийской долине»
+                        </h3>
+                        <div class="slider-card__content-description">
+                            Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">Читать далее</a>
+                        <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
-                <div class="slider-card__footer news__footer">
-                    <a class="news__footer-link" href="">Читать далее</a>
-                    <span class="news__footer-span">4.03.2019</span>
-                </div>
             </div>
-            <div class="slider-card">
-                <div class="slider-card__header news__card-header">
-                    
-                </div>
-                <div class="slider-card__content news__card-content">
-                    <h3 class="news__card-heading">
-                        Итоги зимнего праздника в «Альпийской долине»
-                    </h3>
-                    <div class="slider-card__content-description">
-                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
+                    </div>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            Итоги зимнего праздника в «Альпийской долине»
+                        </h3>
+                        <div class="slider-card__content-description">
+                            Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">Читать далее</a>
+                        <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
-                <div class="slider-card__footer news__footer">
-                    <a class="news__footer-link" href="">Читать далее</a>
-                    <span class="news__footer-span">4.03.2019</span>
-                </div>
             </div>
-            <div class="slider-card">
-                <div class="slider-card__header news__card-header">
-                    
-                </div>
-                <div class="slider-card__content news__card-content">
-                    <h3 class="news__card-heading">
-                        Итоги зимнего праздника в «Альпийской долине»
-                    </h3>
-                    <div class="slider-card__content-description">
-                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
+                    </div>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            Итоги зимнего праздника в «Альпийской долине»
+                        </h3>
+                        <div class="slider-card__content-description">
+                            Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">Читать далее</a>
+                        <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
-                <div class="slider-card__footer news__footer">
-                    <a class="news__footer-link" href="">Читать далее</a>
-                    <span class="news__footer-span">4.03.2019</span>
-                </div>
             </div>
+                
+            
         </div>
-        <div class="slider-cards news__residents-stories  slider-stories" data-class="stories">
-            <div class="slider-card">
-                <div class="slider-card__header news__card-header">
-                    
-                </div>
-                <div class="slider-card__content news__card-content">
-                    <h3 class="news__card-heading">
-                        asdfasdfsdafsadfsadfsadfsaf
-                    </h3>
-                    <div class="slider-card__content-description">
-                        asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+        <div class="slider-cards news__residents-stories slider-stories" data-class="stories">
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
                     </div>
-                </div>
-                <div class="slider-card__footer news__footer">
-                    <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
-                    <span class="news__footer-span">4.03.2019</span>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            asdfasdfsdafsadfsadfsadfsaf
+                        </h3>
+                        <div class="slider-card__content-description">
+                            asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
+                        <span class="news__footer-span">4.03.2019</span>
+                    </div>
                 </div>
             </div>
-            <div class="slider-card">
-                <div class="slider-card__header news__card-header">
-                    
-                </div>
-                <div class="slider-card__content news__card-content">
-                    <h3 class="news__card-heading">
-                        Итоги зимнего праздника в «Альпийской долине»
-                    </h3>
-                    <div class="slider-card__content-description">
-                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
                     </div>
-                </div>
-                <div class="slider-card__footer news__footer">
-                    <a class="news__footer-link" href="">Читать далее</a>
-                    <span class="news__footer-span">4.03.2019</span>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            asdfasdfsdafsadfsadfsadfsaf
+                        </h3>
+                        <div class="slider-card__content-description">
+                            asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
+                        <span class="news__footer-span">4.03.2019</span>
+                    </div>
                 </div>
             </div>
-            <div class="slider-card">
-                <div class="slider-card__header news__card-header">
-                    
-                </div>
-                <div class="slider-card__content news__card-content">
-                    <h3 class="news__card-heading">
-                        Итоги зимнего праздника в «Альпийской долине»
-                    </h3>
-                    <div class="slider-card__content-description">
-                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
                     </div>
-                </div>
-                <div class="slider-card__footer news__footer">
-                    <a class="news__footer-link" href="">Читать далее</a>
-                    <span class="news__footer-span">4.03.2019</span>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            asdfasdfsdafsadfsadfsadfsaf
+                        </h3>
+                        <div class="slider-card__content-description">
+                            asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
+                        <span class="news__footer-span">4.03.2019</span>
+                    </div>
                 </div>
             </div>
-            <div class="slider-card">
-                <div class="slider-card__header news__card-header">
-                    
-                </div>
-                <div class="slider-card__content news__card-content">
-                    <h3 class="news__card-heading">
-                        Итоги зимнего праздника в «Альпийской долине»
-                    </h3>
-                    <div class="slider-card__content-description">
-                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
+                    </div>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            asdfasdfsdafsadfsadfsadfsaf
+                        </h3>
+                        <div class="slider-card__content-description">
+                            asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
+                        <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
-                <div class="slider-card__footer news__footer">
-                    <a class="news__footer-link" href="">Читать далее</a>
-                    <span class="news__footer-span">4.03.2019</span>
+            </div>
+
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
+                    </div>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            asdfasdfsdafsadfsadfsadfsaf
+                        </h3>
+                        <div class="slider-card__content-description">
+                            asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
+                        <span class="news__footer-span">4.03.2019</span>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="slider-cards news__useful-topics slider-topics" data-class="topics">
-            <div class="slider-card">
-                <div class="slider-card__header news__card-header">
-                    
-                </div>
-                <div class="slider-card__content news__card-content">
-                    <h3 class="news__card-heading">
-                            useful TOPICS
-                    </h3>
-                    <div class="slider-card__content-description">
-                        asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
+                    </div>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                                useful TOPICS
+                        </h3>
+                        <div class="slider-card__content-description">
+                            asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
+                        <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
-                <div class="slider-card__footer news__footer">
-                    <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
-                    <span class="news__footer-span">4.03.2019</span>
-                </div>
             </div>
-            <div class="slider-card">
-                <div class="slider-card__header news__card-header">
-                    
-                </div>
-                <div class="slider-card__content news__card-content">
-                    <h3 class="news__card-heading">
-                        Итоги зимнего праздника в «Альпийской долине»
-                    </h3>
-                    <div class="slider-card__content-description">
-                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
+                    </div>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            Итоги зимнего праздника в «Альпийской долине»
+                        </h3>
+                        <div class="slider-card__content-description">
+                            Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">Читать далее</a>
+                        <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
-                <div class="slider-card__footer news__footer">
-                    <a class="news__footer-link" href="">Читать далее</a>
-                    <span class="news__footer-span">4.03.2019</span>
-                </div>
             </div>
-            <div class="slider-card">
-                <div class="slider-card__header news__card-header">
-                    
-                </div>
-                <div class="slider-card__content news__card-content">
-                    <h3 class="news__card-heading">
-                        Итоги зимнего праздника в «Альпийской долине»
-                    </h3>
-                    <div class="slider-card__content-description">
-                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
+                    </div>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            Итоги зимнего праздника в «Альпийской долине»
+                        </h3>
+                        <div class="slider-card__content-description">
+                            Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">Читать далее</a>
+                        <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
-                <div class="slider-card__footer news__footer">
-                    <a class="news__footer-link" href="">Читать далее</a>
-                    <span class="news__footer-span">4.03.2019</span>
-                </div>
             </div>
-            <div class="slider-card">
-                <div class="slider-card__header news__card-header">
-                    
-                </div>
-                <div class="slider-card__content news__card-content">
-                    <h3 class="news__card-heading">
-                        Итоги зимнего праздника в «Альпийской долине»
-                    </h3>
-                    <div class="slider-card__content-description">
-                        Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
+                    </div>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            Итоги зимнего праздника в «Альпийской долине»
+                        </h3>
+                        <div class="slider-card__content-description">
+                            Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">Читать далее</a>
+                        <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
-                <div class="slider-card__footer news__footer">
-                    <a class="news__footer-link" href="">Читать далее</a>
-                    <span class="news__footer-span">4.03.2019</span>
-                </div>
             </div>
+            
         </div>
 
     </section>
@@ -1590,13 +1654,7 @@
 
 
    
-    <script src="JQuery.js"></script>
-    <script src="jquery-ui-1.13.0/jquery-ui.min.js"></script>
-    <script src="./slick-1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="http://maps.api.2gis.ru/1.0"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script src="script.js"></script>
-
+    
     
 </body>
 </html>

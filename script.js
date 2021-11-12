@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+
 $('.phone').mask('+7 (000) 000-0000');
 
 // let phone;
@@ -168,21 +170,28 @@ $('.territories__list').slick({
 //     });
 // });
 
+
+
+
 let f = $('.slider-cards');
 
 f.each(function (index) {
+    let dataClass = $(f[index]).attr('data-class');
 
-    let a = $(f[index]).attr('data-class');
-    console.log(a);
-    console.log('.' + a + '-container');
+    console.log('.' + dataClass + '-arrow')
+
+    $(`.${dataClass}-arrow, .${dataClass}-container`).css({
+        display: index == 0 ? "flex" : "none"
+    })
+
     $(f[index]).slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
         dots: true,
-        appendDots: '.' + a + '-container',
-        appendArrows: '.' + a + '-arrow',
+        appendDots: '.' + dataClass + '-container',
+        appendArrows: '.' + dataClass + '-arrow',
         prevArrow: prevArrow,
         nextArrow: nextArrow,
         responsive: [
@@ -203,50 +212,52 @@ f.each(function (index) {
             }
         ]
     });
-
 });
 
+$(".news__residents-stories, .news__useful-topics").css({
+    display: "none"
+})
 
 
 
 
 
-
-$(".news__tab-news").click(function(e) {
-
-    // показ slick-слайдера с историями жителей
-    $(".news__slick-slider").css({
+$('.news__tab').click(function () {
+    $('.news__tab').removeClass('tabs-navigation__tab_active');
+    $(this).addClass('tabs-navigation__tab_active');
+    let dataClass = $(this).attr('data-class');
+    // $('.slider-cards').removeClass('active');
+    $('.slider-cards').css({
+        display: "none"
+    })
+    // $('.slider-' + n).addClass('active');
+    $('.slider-' + dataClass).css({
         display: "block"
     })
 
+    $('.slider-' + dataClass).slick('setPosition');
 
-    // скрытие slick-слайдера с новостями, полезными статьями
-    $('.news__residents-stories, .news__useful-topics').css({
+
+
+    $(`.news__navigation-wrapper`).children(":not(:first)").css({
         display: "none"
     })
-    
 
-    
+    $(`.news__navigation-wrapper .${dataClass}-container`).css({
+        display: "flex"
+    })
+
+    $(`.news__navigation-wrapper .${dataClass}-arrow`).css({
+        display: "flex"
+    })
+
 });
-
-$('.news__tab').click(function (event) {
-    console.log($(this));
-    $('.news__tab').removeClass('tabs-navigation__tab_active');
-    $(this).addClass('tabs-navigation__tab_active');
-    let n = $(this).attr('data-class');
-    console.log(n);
-    $('.slider-cards').removeClass('active');
-    $('.slider-' + n).addClass('active');
-});
-
 
 
 
 
 
 // Slick-sliders
-
-
 
 $('.about-company__content-element_first').slick({
     infinite: true,
@@ -503,14 +514,238 @@ $(".tabs-navigation__tab").click(function(e) {
 //     }
 // })
 
+
+
+
+
+
+// .attention 
+// Каждому элементу присваивается высота
+
+$(".attention__advice.active").css({
+    height: $(".attention__advice").css("height")
+})
+
+$(".attention__advice:not(.active)").css({
+    height: $(".attention__advice").children(":first").outerHeight()
+})
+
+// По клику высота advice heading присваивается его родительскому элементу 
 $(".attention__advice-heading").click(function() {
+    
+    let parent = $(this).parent();
+    let line = $(this).next();
+    let description = $(line).next();
+    let arrow = $(this).children(":first");
 
-    let padding = $(this).css("padding").slice(0, -2) * 2;
 
-    console.log(padding + $(this).css("height").slice(0, -2))
 
-    $(this).parent().css({
-        height: padding + Number($(this).css("height").slice(0, -2))
-    })
+    if ($(parent).hasClass("active")) {
+
+
+        // Уменьшение высоты родительского блока
+        $(parent).css({
+            height: $(this).outerHeight()
+        })
+        
+        $(parent).removeClass("active");
+        $(arrow).removeClass("active");
+
+    }
+    else {
+
+        
+
+        // Увеличиваем родителю высоту
+        $(parent).css({
+            height: $(this).outerHeight() + line.outerHeight() + description.outerHeight()
+        })
+
+        // Добавляем родителю класс active
+        $(parent).addClass("active")
+        $(arrow).addClass("active");
+
+    }
+
+    
+})
+
+
+
+
+
+//  Paginator
+
+let prevText = `
+    <svg style="transform: rotate(180deg)" xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+    <path  fill="#675A54" d="M12.8261 4.09762C13.0213 4.29288 13.0213 4.60946 12.8261 4.80473L9.64409 7.98671C9.44882 8.18197 9.13224 8.18197 8.93698 7.98671C8.74172 7.79144 8.74172 7.47486 8.93698 7.2796L11.7654 4.45117L8.93698 1.62274C8.74172 1.42748 8.74172 1.1109 8.93698 0.915638C9.13224 0.720376 9.44882 0.720376 9.64409 0.915638L12.8261 4.09762ZM0.0518303 3.95117H12.4725V4.95117H0.0518303V3.95117Z">
+    </path>
+    </svg>`
+
+let nextText = `
+    <svg style="transform: rotate(0deg)" xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+    <path  fill="#675A54" d="M12.8261 4.09762C13.0213 4.29288 13.0213 4.60946 12.8261 4.80473L9.64409 7.98671C9.44882 8.18197 9.13224 8.18197 8.93698 7.98671C8.74172 7.79144 8.74172 7.47486 8.93698 7.2796L11.7654 4.45117L8.93698 1.62274C8.74172 1.42748 8.74172 1.1109 8.93698 0.915638C9.13224 0.720376 9.44882 0.720376 9.64409 0.915638L12.8261 4.09762ZM0.0518303 3.95117H12.4725V4.95117H0.0518303V3.95117Z">
+    </path>
+    </svg>`
+
+$('.table-wrapper').pagination({
+    dataSource: [
+        {
+            name: "Альпийская долина",
+            area: "Участок 304",
+            parts: "10 сот.",
+            square: "1 000 м²",
+            squareCost: "550 000 ₽",
+            partDiscount: "65 000 ₽/сотка",
+            partCost: "55 000 ₽/сотка",
+            description: "Дороги из щебня, участок с краю, на холме"
+        },
+        {
+            name: "Альпийская долина",
+            area: "Участок 304",
+            parts: "10 сот.",
+            square: "1 000 м²",
+            squareCost: "550 000 ₽",
+            partDiscount: "65 000 ₽/сотка",
+            partCost: "55 000 ₽/сотка",
+            description: "Дороги из щебня, участок с краю, на холме"
+        },
+        {
+            name: "Альпийская долина",
+            area: "Участок 304",
+            parts: "10 сот.",
+            square: "1 000 м²",
+            squareCost: "550 000 ₽",
+            partDiscount: "65 000 ₽/сотка",
+            partCost: "55 000 ₽/сотка",
+            description: "Дороги из щебня, участок с краю, на холме"
+        },
+        {
+            name: "Альпийская долина",
+            area: "Участок 304",
+            parts: "10 сот.",
+            square: "1 000 м²",
+            squareCost: "550 000 ₽",
+            partDiscount: "65 000 ₽/сотка",
+            partCost: "55 000 ₽/сотка",
+            description: "Дороги из щебня, участок с краю, на холме"
+        },
+        {
+            name: "Альпийская долина",
+            area: "Участок 304",
+            parts: "10 сот.",
+            square: "1 000 м²",
+            squareCost: "550 000 ₽",
+            partDiscount: "65 000 ₽/сотка",
+            partCost: "55 000 ₽/сотка",
+            description: "Дороги из щебня, участок с краю, на холме"
+        },
+        {
+            name: "Альпийская долина",
+            area: "Участок 304",
+            parts: "10 сот.",
+            square: "1 000 м²",
+            squareCost: "550 000 ₽",
+            partDiscount: "65 000 ₽/сотка",
+            partCost: "55 000 ₽/сотка",
+            description: "Дороги из щебня, участок с краю, на холме"
+        },
+        {
+            name: "Альпийская долина",
+            area: "Участок 304",
+            parts: "10 сот.",
+            square: "1 000 м²",
+            squareCost: "550 000 ₽",
+            partDiscount: "65 000 ₽/сотка",
+            partCost: "55 000 ₽/сотка",
+            description: "Дороги из щебня, участок с краю, на холме"
+        },
+        {
+            name: "Альпийская долина",
+            area: "Участок 304",
+            parts: "10 сот.",
+            square: "1 000 м²",
+            squareCost: "550 000 ₽",
+            partDiscount: "65 000 ₽/сотка",
+            partCost: "55 000 ₽/сотка",
+            description: "Дороги из щебня, участок с краю, на холме"
+        },
+        {
+            name: "А1231232342314234",
+            area: "Участок 304",
+            parts: "10 сот.",
+            square: "1 000 м²",
+            squareCost: "550 000 ₽",
+            partDiscount: "65 000 ₽/сотка",
+            partCost: "55 000 ₽/сотка",
+            description: "Дороги из щебня, участок с краю, на холме"
+        }
+    ],
+    prevText: `${prevText} Назад`,
+    nextText: `Вперёд ${nextText}`,
+    ulClassName: "ul-pagination",
+    liClassName: "li-pagination",
+    pageSize: 5,
+    pageNumber: 1,
+    callback: function(data, pagination) {
+        var html = simpleTemplating(data);
+        $('.table tbody').html(html);
+    }
+});
+
+
+function simpleTemplating(data) {
+    let row = '<tr class="table__row">';
+    $.each(data, function(index, item){
+        row += `<td class="table__territory-name">
+                    <div>
+                        <b>${item.name}</b>
+                    </div>
+                    ${item.area}
+                </td>
+                <td class="table__territory-size">
+                    <div>${item.parts}</div>
+                    ${item.square}
+                </td>
+                <td class="table__total-price">
+                    ${item.squareCost}
+                </td>  
+                <td class="table__price">
+                    <div>
+                        <s>
+                            ${item.partDiscount}
+                        </s>
+                    </div>
+                    ${item.partCost}
+                </td> 
+                <td class="table__description">
+                    ${item.description}
+                </td>   
+                <td class="table__on-map">
+                    <img src="./img/map-point.png" alt="" srcset="">
+                    <a class="table__on-map-link" href="">
+                        На карте
+                    </a>
+                </td>
+                <td>
+                    <div class="table__button-wrapper">
+                        <button class="white-button table__button">
+                            Забронировать
+                        </button>
+                    </div>
+                </td> </tr>`;
+    });
+
+    return row;
+}
+
+
+
+
+$(".paginationjs-page:first").addClass("first")
+$(".paginationjs-page:last").addClass("last")
+
+
+
 
 })
