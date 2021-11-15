@@ -574,7 +574,10 @@ $(".attention__advice-heading").click(function() {
 
 
 
-//  Paginator
+//  Pagination
+
+
+
 
 let prevText = `
     <svg style="transform: rotate(180deg)" xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
@@ -588,116 +591,230 @@ let nextText = `
     </path>
     </svg>`
 
+
+const dataSource = [
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "55 000 ₽/сотка",
+        partCost: "65 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "А1231232342314234",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    },
+    {
+        name: "Альпийская долина",
+        area: "Участок 304",
+        parts: "10 сот.",
+        square: "1 000 м²",
+        squareCost: "550 000 ₽",
+        partDiscount: "65 000 ₽/сотка",
+        partCost: "55 000 ₽/сотка",
+        description: "Дороги из щебня, участок с краю, на холме"
+    }
+]
+
 $('.table-wrapper').pagination({
-    dataSource: [
-        {
-            name: "Альпийская долина",
-            area: "Участок 304",
-            parts: "10 сот.",
-            square: "1 000 м²",
-            squareCost: "550 000 ₽",
-            partDiscount: "65 000 ₽/сотка",
-            partCost: "55 000 ₽/сотка",
-            description: "Дороги из щебня, участок с краю, на холме"
-        },
-        {
-            name: "Альпийская долина",
-            area: "Участок 304",
-            parts: "10 сот.",
-            square: "1 000 м²",
-            squareCost: "550 000 ₽",
-            partDiscount: "65 000 ₽/сотка",
-            partCost: "55 000 ₽/сотка",
-            description: "Дороги из щебня, участок с краю, на холме"
-        },
-        {
-            name: "Альпийская долина",
-            area: "Участок 304",
-            parts: "10 сот.",
-            square: "1 000 м²",
-            squareCost: "550 000 ₽",
-            partDiscount: "65 000 ₽/сотка",
-            partCost: "55 000 ₽/сотка",
-            description: "Дороги из щебня, участок с краю, на холме"
-        },
-        {
-            name: "Альпийская долина",
-            area: "Участок 304",
-            parts: "10 сот.",
-            square: "1 000 м²",
-            squareCost: "550 000 ₽",
-            partDiscount: "65 000 ₽/сотка",
-            partCost: "55 000 ₽/сотка",
-            description: "Дороги из щебня, участок с краю, на холме"
-        },
-        {
-            name: "Альпийская долина",
-            area: "Участок 304",
-            parts: "10 сот.",
-            square: "1 000 м²",
-            squareCost: "550 000 ₽",
-            partDiscount: "65 000 ₽/сотка",
-            partCost: "55 000 ₽/сотка",
-            description: "Дороги из щебня, участок с краю, на холме"
-        },
-        {
-            name: "Альпийская долина",
-            area: "Участок 304",
-            parts: "10 сот.",
-            square: "1 000 м²",
-            squareCost: "550 000 ₽",
-            partDiscount: "65 000 ₽/сотка",
-            partCost: "55 000 ₽/сотка",
-            description: "Дороги из щебня, участок с краю, на холме"
-        },
-        {
-            name: "Альпийская долина",
-            area: "Участок 304",
-            parts: "10 сот.",
-            square: "1 000 м²",
-            squareCost: "550 000 ₽",
-            partDiscount: "65 000 ₽/сотка",
-            partCost: "55 000 ₽/сотка",
-            description: "Дороги из щебня, участок с краю, на холме"
-        },
-        {
-            name: "Альпийская долина",
-            area: "Участок 304",
-            parts: "10 сот.",
-            square: "1 000 м²",
-            squareCost: "550 000 ₽",
-            partDiscount: "65 000 ₽/сотка",
-            partCost: "55 000 ₽/сотка",
-            description: "Дороги из щебня, участок с краю, на холме"
-        },
-        {
-            name: "А1231232342314234",
-            area: "Участок 304",
-            parts: "10 сот.",
-            square: "1 000 м²",
-            squareCost: "550 000 ₽",
-            partDiscount: "65 000 ₽/сотка",
-            partCost: "55 000 ₽/сотка",
-            description: "Дороги из щебня, участок с краю, на холме"
-        }
-    ],
+    dataSource: dataSource,
+    ulClassName: "ul-pagination",
     prevText: `${prevText} Назад`,
     nextText: `Вперёд ${nextText}`,
-    ulClassName: "ul-pagination",
-    liClassName: "li-pagination",
-    pageSize: 5,
+    pageSize: $(window).width() > "320" ? 12 : dataSource.length,
     pageNumber: 1,
     callback: function(data, pagination) {
         var html = simpleTemplating(data);
-        $('.table tbody').html(html);
+        $('.table').html(html);
     }
 });
 
 
 function simpleTemplating(data) {
-    let row = '<tr class="table__row">';
+    let row = '';
     $.each(data, function(index, item){
-        row += `<td class="table__territory-name">
+        row += `
+            <tr class="table__row">
+                <td class="table__territory-name">
                     <div>
                         <b>${item.name}</b>
                     </div>
@@ -713,10 +830,10 @@ function simpleTemplating(data) {
                 <td class="table__price">
                     <div>
                         <s>
-                            ${item.partDiscount}
+                            ${item.partCost}
                         </s>
                     </div>
-                    ${item.partCost}
+                    ${item.partDiscount}
                 </td> 
                 <td class="table__description">
                     ${item.description}
@@ -727,24 +844,52 @@ function simpleTemplating(data) {
                         На карте
                     </a>
                 </td>
-                <td>
+                <td class="table__reserve">
                     <div class="table__button-wrapper">
                         <button class="white-button table__button">
                             Забронировать
                         </button>
                     </div>
-                </td> </tr>`;
-    });
+                </td>
 
+                <td class="table__mobile-card">
+                    <h2 class="table__card-heading">
+                        ${item.name}, уч. ${item.area.split(" ")[1]}
+                    </h2>
+                    <div class="table__card-total">
+                        <span class="table__card-total-price">
+                        ${item.squareCost}
+                        </span>
+                        <span class="table__card-total-size">
+                            ${item.parts}
+                        </span>
+                    </div>
+                    <div class="table__card-discount">
+                        <div>
+                            ${item.partDiscount}
+                        </div>
+                        <div>
+                            <s>
+                                ${item.partCost}
+                            </s>
+                        </div>
+                    </div>
+                    <div class="table__link-wrapper">
+                        <img src="./img/map-point.png" alt="" srcset="">
+                        <a class="table__on-map-link" href="">
+                            На карте
+                        </a>
+                    </div>
+                    <div class="table__card-button-wrapper">
+                        <button class="white-button table__card-button">
+                            Забронировать
+                        </button>
+                    </div>
+                </td>
+            </tr>`;
+    });
     return row;
 }
-
-
-
-
-$(".paginationjs-page:first").addClass("first")
-$(".paginationjs-page:last").addClass("last")
-
 
 
 

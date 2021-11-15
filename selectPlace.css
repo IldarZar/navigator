@@ -24,6 +24,10 @@ a {
     text-decoration: none;
 }
 
+a:visited {
+    color: unset;
+}
+
 #slider .ui-slider-range {
     background-color: #6bbd45;
     border: 0;
@@ -141,6 +145,28 @@ a {
     font-size: 13px;
     line-height: 16px;
     color: #675A54;
+}
+
+.navigation-chain__active {
+    opacity: .5;
+}
+
+
+
+
+
+
+
+
+
+/* Page nav */
+
+.page-nav__element-span:nth-child(2):before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90.06deg, #2983D4 49.95%, #7EC95C 77.15%);
 }
 
 
@@ -493,7 +519,7 @@ a {
 
 
 
-
+/* Select place */
 
 .select-place {
     max-width: 1836px;
@@ -501,6 +527,10 @@ a {
     width: 100%;
 } 
 
+
+.select-place__settings-button-wrapper, .select-place__settings-button {
+    cursor: pointer;
+}
 
 .select-place__form {
     height: calc(100% - 223px);
@@ -575,8 +605,6 @@ a {
 .select-place__hide-form {
     display: none;
 }
-
-
 
 .select-place__checkbox-wrapper {
     margin-bottom: 10px;
@@ -825,11 +853,13 @@ a {
     width: 66%;
     margin: 0 auto;
     display: flex;
-    padding: 26px 0;
+    padding: 25px 0;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
     color: #675A54;
+    border-top: 1px solid #D1D1D1;
+    border-bottom: 1px solid #D1D1D1;
 }
 
 .table-wrapper__span {
@@ -840,7 +870,6 @@ a {
     width: 66%;
     margin: 0 auto;
     display: block;
-    border-bottom: 1px solid #D1D1D1;
 }
 
 .table {
@@ -849,8 +878,8 @@ a {
     border-collapse: collapse;
 }
 
-tr:first-child td{
-    border-top: 1px solid #D1D1D1;
+.table__mobile-card {
+    display: none;
 }
 
 td {
@@ -892,17 +921,32 @@ tr:last-child td {
     font-weight: bold;
 }
 
+
 .table__row:hover  .table__button {
-    display: block;
+    opacity: 1;
 }
 
-.table__button-wrapper {
+.table__reserve {
     width: 187px;
     height: 50px;
 }
 
+.table__button-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
 .table__button {
-    display: none;
+    transition: .5s;
+}
+
+.table__button:hover {
+    background-color: #6BBD45;
+    color: #FFFFFF;
+}
+
+.table__button {
+    opacity: 0;
     width: 100%;
     height: 100%;
 }
@@ -913,6 +957,7 @@ tr:last-child td {
 
 .table__total-price {
     padding-right: 50px;
+    font-weight: bold;
 }
 
 
@@ -1098,6 +1143,8 @@ tr:last-child td {
     display: flex;
 }
 
+
+
 .paginationjs-prev, .paginationjs-next {
     margin: 0 10px;
     width: 100px;
@@ -1121,15 +1168,42 @@ tr:last-child td {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-size: 14px;
+    line-height: 19px;
+    color: #675A54;
+
+    cursor: pointer;
 }
 
-.paginationjs-page:first-child {
-    border-radius: 3px 0px 0px 3px;
+.paginationjs-page.active {
+    background-color: #7EC95C;
+    color: white;
 }
 
-.paginationjs-page:last-child {    
-    border-radius: 0px 3px 3px 0px;
+.ul-pagination .paginationjs-page:nth-child(2) {
+    border-radius: 3px 0 0 3px;
 }
+ .ul-pagination .paginationjs-page:nth-last-child(2) {
+    border-radius: 0 3px 3px 0;
+}
+
+
+.J-paginationjs-previous a, .J-paginationjs-next a {
+    color: #675A54;
+}
+
+.J-paginationjs-previous:visited, .J-paginationjs-next:visited {
+    color: #675A54 !important;
+}
+
+.ul-pagination .disabled a {
+    color: #675A54;
+    opacity: .5;
+    cursor: default;
+}
+
+
 
 
 
@@ -1413,6 +1487,10 @@ a.page-footer__location-content-link{
     .page-nav__element {
         margin-right: 20px;
     }
+
+    .mailing__checkbox-wrapper {
+        margin-top: 0px;
+    }
 }
 
 
@@ -1534,18 +1612,28 @@ a.page-footer__location-content-link{
 
 
 
+
     /* Select place */
 
     .select-place {
-        margin-bottom: 20px;
+        margin: 35px 0 20px;
     }
 
     .select-place__form-heading-wrapper {
         width: 90%;
     }
 
+    .select-place__form-heading {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 27px;
+        color: #675A54;
+        margin-bottom: 20px;
+        padding-right: 40px;
+    }
+
     .select-palce__form-wrapper {
-        padding: 20px;
+        padding: 16px;
         width: 90%;
     }
 
@@ -1553,17 +1641,82 @@ a.page-footer__location-content-link{
         display: flex;
         flex-direction: column;
     }
+
+    .select-place__hide-form {
+        display: none;
+    }
+
+    #slider {
+        width: calc(100% - 20px);
+        margin: 10px auto 0 auto;
+    }
+
+    .select-place__size-heading {
+        margin-top: 37  px;
+    }
+
+    .select-place__size-slider {
+        margin-top: 18px;
+    }
+
+    .select-place__size {
+        margin-top: 35px;
+        margin-bottom: 27px;
+    }
+
+    .select-place__settings {
+        margin-top: 0px;
+    }
+
+    .select-place__button {
+        margin: 0 auto;
+    }
+
+    .slider-values {
+        width: calc(100% - 10px);
+        margin-top: 10px;
+    }
    
-    
+    .select-place__settings-button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .select-place__settings-button {
+        margin-right: 5px;
+    }
 
     .form__element {
         width: 100%;
     }
 
+    .select-place__cost-heading,
+    .select-place__size-heading {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .slider-values span {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #675A54;
+    }
+
+
+
 
 
 
     /* Table */
+
+    .table {
+        width: 90%;
+        margin-top: 15px;
+
+    }
 
     .table-wrapper__span {
         width: 90%;
@@ -1576,9 +1729,111 @@ a.page-footer__location-content-link{
         overflow: hidden;
     }
 
+    .table__territory-name, 
+    .table__territory-size,
+    .table__total-price, 
+    .table__price,
+    .table__description,
+    .table__on-map,
+    .table__reserve {
+        display: none;
+        border-bottom: 0;
+    }
+
+    
+
+    .table__card-heading {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #675A54;
+        margin-bottom: 15px;
+    }
+
+    .table__sort-text {
+        margin-left: auto;
+    }
+
+    .table__sort {
+        margin-left: 0;
+        overflow-x: auto;
+    }
+
+    .table__mobile-card {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #D1D1D1;
+        box-sizing: border-box;
+        border-radius: 3px;
+        margin-bottom: 15px;
+    }
+
+    .table__card-discount {
+        margin-bottom: 33px;
+    }
+
+    .table__card-total {
+        margin-bottom: 5px;
+    }
+
+    .table__card-total-price {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #675A54;
+        margin-right: 30px;
+    }
+
+    .table__link-wrapper {
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    a.table__on-map-link {
+        margin-left: 5px;
+        color: #6BBD45;
+    }
+
+    .table__card-total-size {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        color: #675A54;
+    }
+
+    .table__card-button-wrapper {
+        width: 100%;
+        height: 50px;
+    }
+
+    .table__card-button {
+        width: 100%;
+        height: 100%;
+    }
 
 
 
+
+
+    /* Pagination JS */
+
+    .paginationjs {
+        display: none;
+    }
+
+
+
+
+
+
+
+
+    .attention, 
+    .deal-offer,
+    .page-footer {
+        display: none;
+    }
 }
 
 
