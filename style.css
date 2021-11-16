@@ -170,6 +170,12 @@ a {
     line-height: 20px;
     color: #FFFFFF;
     font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.green-button:hover {
+    background: #B0E07D;
 }
 
 
@@ -885,6 +891,10 @@ a {
     margin-bottom: 0% !important;
     position: relative !important;
     background-size: cover !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 
@@ -1112,10 +1122,11 @@ a {
 }
 
 .territories .slick-track .slick-slide {
-    /* width: 388px !important; */
-    margin-left: 4px !important;
-    margin-right: 4px !important;
+    /* width: 203px !important; */
+    /* margin-left: 4px !important; */
+    margin-right: 30px !important;
     /* padding-right: 12px; */
+
 } 
 
 
@@ -1203,6 +1214,10 @@ a {
     align-items: center;
 }
 
+
+.select-place .slider-values {
+    width: 80%;
+}
 
 .top-line__wrapper {
     width: 66%;
@@ -1351,16 +1366,11 @@ a {
     width: 80%;
 }
 
-.select-place__size-slider {
-    margin-top: 25px;
-    width: 80%;
-}
 
 .select-place__size-slider {
     margin-top: 25px;
     width: 80%;
     border-radius: 20px;
-
 }
 
 .select-place .cost .line, 
@@ -1375,7 +1385,6 @@ a {
 .slider-values{
     position: relative;
     margin-top: 25px;
-    width: 80%;
     font-weight: 400;
     color: #392424;
 }
@@ -1572,6 +1581,7 @@ a {
     background-size: cover;
     border-radius: 3px;
     grid-column-end: span 2;
+    height: 174px;
 }
 
 .why-us__arrow-slider {
@@ -1609,8 +1619,16 @@ a {
     font-size: 16px;
     line-height: 22px;
     color: #392424;
+    word-wrap: break-word;
 }
 
+.why-us__text-wrapper {
+    padding: 10px;
+}
+
+.why-us__slider-content {
+    margin-right: 20px;
+}
 
 .why-us__mobile-plates {
     display: none !important;
@@ -2552,9 +2570,9 @@ a.page-footer__location-content-link{
         width: 90%;
     }
 
-    .main-section .slick-list { 
+    /* .main-section .slick-list { 
         padding: 0 20% 0 0 !important;
-    }
+    } */
 
     .main-section__banner-content {
         width: 92%;
@@ -2589,6 +2607,11 @@ a.page-footer__location-content-link{
     .top-line__wrapper {
         width: calc(90% - 10px);
     }
+
+
+
+
+    /* Select Place */
 
     .select-place__form-wrapper-inner, .bottom-line__wrapper {
         width: calc(90% - 10px);
@@ -2649,6 +2672,19 @@ a.page-footer__location-content-link{
 
     .about-company {
         width: 100%;
+        max-width: 320px;
+    }
+
+    .select-place__cost-slider {
+        margin-top: 25px;
+        width: 110%;
+    }
+    
+    
+    .select-place__size-slider {
+        margin-top: 25px;
+        width: 110%;
+        border-radius: 20px;
     }
 
 
@@ -2684,57 +2720,62 @@ a.page-footer__location-content-link{
         grid-template-columns: 1fr 1fr;
     }
 
-
+/*
     .about-company__content-element_first .slick-dots {
-        margin: 140px 0 0 70px;
-       
-    }
+        /* margin: 0 auto; */
+        /* margin-top: -34px;
+        position: static;
+        bottom: 0;
+        left: 0;
+    } */
 
     .about-company__content-element_second, .about-company__content-element_fivth {
         box-sizing: unset;
     }
 
-    .about-company__content-element {
-        height: 165px !important;
-        width: 205px;
-    }
 
 
-    /* .about-company__content-element:not(:first-child) {
-        margin: 0 20px 0 0;
-    }
-  */
     .about-company__content > .about-company__content-element:not(:first-child) {
         display: none;
         padding-left: 93px;
     }
 
     .about-company__mobile-plates {
+        margin-top: 15px;
+        width: 320px !important;
         display: block !important;
-        padding: 10px 5px 0 0;
+        /* padding: 10px 5px 0 0; */
 
+    }
+
+    .about-company__mobile-plates .slick-dots {
+        display: none !important;
     }
 
   
 
     
 
-    .about-company__mobile-plates .slick-list {
-        /* width: 100%; */
+    /* .about-company__mobile-plates .slick-list {
+        width: 100%; */
         /* padding: 0 10px 0 10px !important; */
-        padding: 0 20px 0 0 !important;
-        margin-left: 10px !important;
-    }
+        /* padding: 0 20px 0 0 !important;
+        margin-left: 10px !important; */
+    /* } */
 
-    .about-company__mobile-plates .slick-track {
-        height: 200px;
+    /* .about-company__mobile-plates .slick-track {
+        height: 200px; */
         /* margin-right: 20px; */
 
-    }
+    /* } */
 
     
     .about-company__mobile-plates .about-company__content-element {
-        margin-right: 10px;
+        width: 203px;
+        /* padding-right: 40px;
+        padding-left: 40px;
+        margin: 0 20px; */
+        margin-right: 30px;
     }
     
 
@@ -2891,18 +2932,20 @@ a.page-footer__location-content-link{
 
     .why-us__mobile-plate {
         padding: 20px;
-        margin-right: 10px;
+        margin-right: 35px;
+        width: 225px;
+        height: 200px !important;
         /* margin-left: 5px; */
     }
 
-    .why-us__mobile-plates .slick-list {
+    /* .why-us__mobile-plates .slick-list {
         padding: 0 20px 0 0;
         margin-left: 20px;
     }
 
     .why-us__mobile-plates .slick-track {
         height: 200px;
-    }
+    } */
 
     .why-us__mobile-plates {
         display: block !important;
@@ -2969,14 +3012,17 @@ a.page-footer__location-content-link{
     .why-us__mobile-bottom-img {
         margin: 0 auto;
     }
-
+/* 
     .why-us .slick-dots button::before {
         font-size: 13px !important;
         opacity: 1 !important;
         color: #F3EFED !important;
     }
    
-    
+    .why-us__slick-slider > .slick-list {
+        padding: 0 10px !important;
+    }
+     */
 
 
 
@@ -3023,6 +3069,7 @@ a.page-footer__location-content-link{
     }
 
     .questions__form {
+        justify-content: center;
         width: 100%;
         height: 70%;
     }
@@ -3046,6 +3093,10 @@ a.page-footer__location-content-link{
 
     .news {
         width: 90%;
+    }
+
+    .news-container, .stories-container, .topics-container {
+        display: none !important;
     }
 
     .news__heading {
@@ -3075,10 +3126,10 @@ a.page-footer__location-content-link{
         margin: 20px auto 0;
     }
 
-    .news .slick-list {
+    /* .news .slick-list {
         width: 100%;
         padding: 0 30px 0 0;
-    }
+    } */
 
 
 
@@ -3092,7 +3143,7 @@ a.page-footer__location-content-link{
     /* mailing */
 
     .mailing {
-        width: 322px;
+        width: 320px;
         height: 429px;
     }
 

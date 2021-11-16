@@ -68,6 +68,8 @@ $('.territories__list').slick({
     appendArrows: ".territories__arrow-slider .arrows-container",
     prevArrow: prevArrow,
     nextArrow: nextArrow,
+    // centerMode: true,
+    // centerPadding: '0px',
     responsive: [
         {
         breakpoint: 1211,
@@ -81,12 +83,13 @@ $('.territories__list').slick({
         breakpoint: 800,
         settings: {
             slidesToShow: 1,
+            centerMode: true,
+            centerPadding: '15px',
             slidesToScroll: 1
         }
         }
     ]
 });
-
 
 
 
@@ -100,8 +103,8 @@ $('.territories__list').slick({
 //     dots: true,
 //     appendDots: ".news__arrow-slider",
 //     appendArrows: ".news__arrows-container",
-        // prevArrow: prevArrow,
-        // nextArrow: nextArrow,
+//     prevArrow: prevArrow,
+//     nextArrow: nextArrow,
 //     responsive: [
 //         {
 //         breakpoint: 1211,
@@ -253,6 +256,7 @@ $('.news__tab').click(function () {
 
 });
 
+window.dispatchEvent(new Event('resize'));
 
 
 
@@ -303,28 +307,17 @@ $(".main-section__slider").slick({
 
 
 
-$(".why-us__mobile-bottom-cards, .why-us__mobile-plates, .about-company__mobile-plates").slick({ //  .
+$(".why-us__mobile-bottom-cards, .why-us__mobile-plates, .about-company__mobile-plates").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
-    arrows: false
+    arrows: false,
+    variableWidth: true,
+    centerMode: true,
+    centerPadding: "0px"
 });
 
 
-
-
-$(".select-place__settings-button").click(function(e) {
-    e.preventDefault();
-
-    if ($(".select-place__settings").hasClass("select-place__hide-form")) {
-        $(".select-place__settings").removeClass("select-place__hide-form");
-
-    }
-    else {
-        $(".select-place__settings").addClass("select-place__hide-form");
-    }
-    
-});
 
 
 
@@ -562,8 +555,8 @@ $(".attention__advice-heading").click(function() {
         })
 
         // Добавляем родителю класс active
-        $(parent).addClass("active")
-        $(arrow).addClass("active");
+        $(parent).addClass('active');
+        $(arrow).addClass('active');
 
     }
 
@@ -797,10 +790,10 @@ const dataSource = [
 
 $('.table-wrapper').pagination({
     dataSource: dataSource,
-    ulClassName: "ul-pagination",
+    ulClassName: 'ul-pagination',
     prevText: `${prevText} Назад`,
     nextText: `Вперёд ${nextText}`,
-    pageSize: $(window).width() > "320" ? 12 : dataSource.length,
+    pageSize: $(window).width() > '320' ? 12 : dataSource.length,
     pageNumber: 1,
     callback: function(data, pagination) {
         var html = simpleTemplating(data);
@@ -891,6 +884,29 @@ function simpleTemplating(data) {
     return row;
 }
 
+
+$('.select-place__settings-button-wrapper').click(function() {
+
+    if ($(".select-place__settings").hasClass("hide")) {
+        $(".select-place__settings").removeClass("hide")
+        const settings = [
+            $(this).next(),         // settings
+            $(this),                // settingsButton 
+            $(this).next().next()   // button
+        ]
+        
+        settings.forEach((el, i) => {
+            $(el).css({
+                order: i
+            })
+
+
+        })
+    } else {
+        $(".select-place__settings").addClass("hide")
+    }
+
+})
 
 
 })
