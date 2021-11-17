@@ -31,7 +31,9 @@
     </div>
 
     <div class="mobile-menu">
-        <div class="mobile-menu__cross green-button"></div>
+        <div class="mobile-menu__cross-wrapper green-button">
+            <img class="mobile-menu__cross" src="./img/crossWhite.png" alt="" srcset="">
+        </div>
         <a class="mobile-menu__phone">
             +7 3452
             <p>565-455</p>
@@ -790,19 +792,19 @@
             <div class="green-background">
 
             </div>
-            <div class="buy-place__tab tabs-navigation__tab tabs-navigation__tab_active">
+            <div class="buy-place__tab tabs-navigation__tab tabs-navigation__tab_active" data-class='steps'>
                 Этапы покупки
             </div>
-            <div class="buy-place__tab tabs-navigation__tab">
+            <div class="buy-place__tab tabs-navigation__tab" data-class="installment">
                 Рассрочка
             </div>
-            <div class="buy-place__tab tabs-navigation__tab">
+            <div class="buy-place__tab tabs-navigation__tab" data-class="mortgage">
                 Ипотека
             </div>
         </div>
         <div class="steps__wrapper buy-place__steps-wrapper active">
-            <div class="steps buy-place__steps active">
-                <div class="step buy-place__step">
+            <div class="buy-place__steps active">
+                <div class="buy-place__step">
                     <div class="step__number">
                         1
                     </div>
@@ -815,11 +817,12 @@
                             
                         </div>
                     </div>
+                    
                     <div class="step__description">
                         Оставьте заявку на обратный звонок
                     </div>
                 </div>
-                <div class="step buy-place__step">
+                <div class="buy-place__step">
                     <div class="step__number">
                         2
                     </div>
@@ -832,13 +835,14 @@
                             
                         </div>
                     </div>
+                   
                     <div class="step__description">
                         Мы позвоним и пригласим вас на экскурсию или в офис
                     </div>
                     
                 </div>
 
-                <div class="step buy-place__step">
+                <div class="buy-place__step">
                     <div class="step__number">
                         3
                     </div>
@@ -851,12 +855,13 @@
                             
                         </div>
                     </div>
+                    
                     <div class="step__description">
                         Выберем с вами удобный способ оплаты
                     </div>
                 </div>
 
-                <div class="step buy-place__step">
+                <div class="buy-place__step">
                     <div class="step__number">
                         4
                     </div>
@@ -873,23 +878,179 @@
                     <div class="step__description">
                         Участок ваш!
                     </div>
-                    
+                </div>
+            </div>
+
+            <div class="buy-place__installment">
+                <div class="buy-place__step">
+                    <div class="step__number" style="background: #FFF;">
+
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="	https://navigator-tmn.ru/upload/iblock/b5f/5.svg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <h3 class="buy-place__step-heading">
+                        Выгодно
+                    </h3>
+                    <div class="step__description">
+                        
+                        0% без переплат до 12 месяцев
+                    </div>
+                </div>
+                <div class="buy-place__step">
+                    <div class="step__number" style="background: #FFF;">
+
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="	https://navigator-tmn.ru/upload/iblock/1d5/6.svg" alt="" srcset="">
+                        </div>
+                        
+                    </div>
+                    <h3 class="buy-place__step-heading">
+                        Удобно
+                    </h3>
+                    <div class="step__description">
+                        Удобно
+
+                        Первоначальный платеж от 30 000 рублей
+                    </div>
+                </div>
+
+                <div class="buy-place__step">
+                    <div class="step__number" style="background: #FFF;">
+
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/2f9/7.svg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <h3 class="buy-place__step-heading">
+                        Гарантированно
+                    </h3>
+                    <div class="step__description">
+                        Выберем с вами удобный способ оплаты
+                    </div>
+                </div>
+
+                <div class="buy-place__step">
+                    <div class="step__number" style="background: #FFF;">
+
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/daa/8.svg" alt="" srcset="">
+                        </div>
+                        
+                    </div>
+                    <h3 class="buy-place__step-heading">
+                        Эксклюзивно
+                    </h3>
+                    <div class="step__description">
+                        Участок ваш!
+                    </div>
+                </div>
+
+                <a href="#" class="buy-place__more-info">
+                    Подробнее о рассрочке
+                </a>
+            </div>
+
+
+            <div class="buy-place__mortgage">
+                <div class="buy-place__step">
+                    <div class="step__number" style="background: #FFF;">
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/e71/9.svg" alt="" srcset="">
+                        </div>
+                    </div> 
+                    <h3 class="buy-place__step-heading">
+                        Ведущие банки
+                    </h3>
+                    <div class="step__description">
+                        «Сбербанк» и «Запсибкомбанк»
+                    </div>
+                </div>
+                <div class="buy-place__step">
+                    <div class="step__number" style="background: #FFF;">
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/56e/10.svg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <h3 class="buy-place__step-heading">
+                        % Ставки
+                    </h3>
+                    <div class="step__description">
+                        от 10,8%
+                    </div>
+                </div>
+                <div class="buy-place__step">
+                    <div class="step__number" style="background: #FFF;"> 
+                    </div>
+                    <div class="logo__wrapper">
+
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/e45/11.svg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <h3 class="buy-place__step-heading">
+                        Эксклюзивно
+                    </h3>
+                    <div class="step__description">
+                        Выберем с вами удобный способ оплаты
+                    </div>
+                </div>
+                <div class="buy-place__step">
+                    <div class="step__number" style="background: #FFF;">
+                    </div>
+                    <div class="logo__wrapper">
+                        <div class="step__logo">
+                            <img src="https://navigator-tmn.ru/upload/iblock/7df/12.svg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <h3 class="buy-place__step-heading">
+                        Эксклюзивно
+                    </h3>
+                    <div class="step__description">
+                        Участок ваш!
+                    </div>
+                </div>
+
+                <div class="buy-place__more-info">
+                    <a href="#" class="buy-place__mortgage-info">
+                        Подробнее о рассрочке
+                    </a>
+
+                    <a href="#" class="buy-place__calculator-span">
+                        Калькулятор расчета ипотеки
+                    </a>
                 </div>
             </div>
         <div>
         <div class="steps__wrapper">
-            <div class="steps active">
+            <div class="active">
                 <div class="step">
                     <div class="step__number">
                         1
                     </div>
                     <div class="logo__wrapper">
-
                         <div class="step__logo">
                             <img src="https://navigator-tmn.ru/upload/iblock/432/1.svg" alt="" srcset="">
                         </div>
                         <div class="step__line">
-                            
                         </div>
                     </div>
                     <div class="step__description">
@@ -912,20 +1073,16 @@
                     <div class="step__description">
                         Мы позвоним и пригласим вас на экскурсию или в офис
                     </div>
-                    
                 </div>
-
                 <div class="step">
                     <div class="step__number">
                         3
                     </div>
                     <div class="logo__wrapper">
-
                         <div class="step__logo">
                             <img src="https://navigator-tmn.ru/upload/iblock/e17/3.svg" alt="" srcset="">
                         </div>
                         <div class="step__line">
-                            
                         </div>
                     </div>
                     <div class="step__description">
@@ -947,7 +1104,7 @@
             </div>
         <div>
         <div class="steps__wrapper">
-            <div class="steps active">
+            <div class="active">
                 <div class="step">
                     <div class="step__number">
                         1
@@ -1090,7 +1247,7 @@
             </div>
             <div class="why-us__fivth-plate why-us__plate">
                 <div class="why-us__slick-slider">
-                    <div class="loyality__top why-us__slider-content">
+                    <div class="why-us__slider-content">
                         <div class="why-us__text-wrapper">
                             <h3 class="why-us__slider-content-heading">
                                 Программа "Лояльный покупатель"
@@ -1101,30 +1258,45 @@
                         </div>
                         <img src="./img/discount.png" alt="">
                     </div>
-                    <div class="loyality__top why-us__slider-content">
+                    <div class="why-us__slider-content">
                         <div class="why-us__text-wrapper">
                             <h3 class="why-us__slider-content-heading">
-                                Программа "Лояльный покупатель"
+                                Рассказываем и показываем
                             </h3>
                             <span class="why-us__slider-content-span">
-                                Дарим скидку 10% при 100% оплате земельного участка в любом из наших коттеджных поселков
+                                Наши специалисты в удобное для вас время проведут экскурсии по коттеджным поселкам компании «Навигатор», расскажут и покажут все преимущества жизни за городом в красивых и благоустроенных поселках.
                             </span>
                         </div>
-                        <img src="./img/discount.png" alt="">
+                        <img style="height: 177px" src="./img/eye.png" alt="">
                     </div>
                     <div class="loyality__top why-us__slider-content">
                         <div class="why-us__text-wrapper">
                             <h3 class="why-us__slider-content-heading">
-                                Программа "Лояльный покупатель"
+                                Сопровождение сделки юристом
                             </h3>
                             <span class="why-us__slider-content-span">
-                                Дарим скидку 10% при 100% оплате земельного участка в любом из наших коттеджных поселков
+                                Ведущий юрисконсульт окажет полный спектр услуг – от оформления договора купли-продажи до сдачи документов на государственную регистрацию.
                             </span>
                         </div>
-                        <img src="./img/discount.png" alt="">
+                        <img src="./img/bag.png" alt="">
+                    </div>
+                    <div class="why-us__slider-content">
+                        <div class="why-us__text-wrapper">
+                            <h3 class="why-us__slider-content-heading">
+                                Поможем с выбором
+                            </h3>
+                            <span class="why-us__slider-content-span">
+                                Купить земельный участок в Тюмени под ИЖС очень просто: мы всегда предложим оптимальный вариант с учетом ваших пожеланий и представлений!
+                            </span>
+                        </div>
+                        <img src="./img/choice.png" alt="">
                     </div>
                 </div>
+                
                 <div class="why-us__slider-navigation">
+                    <button class="green-button why-us__slider-button">
+                        Подобрать участок
+                    </button>
                     <div class="why-us__arrows-container arrows-container">
 
                     <div class="why-us__dots-container"></div>
@@ -1183,24 +1355,36 @@
                 <div class="why-us__mobile-bottom-card">
                     <div class="why-us__mobile-bottom-text">
                         <h3 class="why-us__mobile-bottom-heading">
-                            Программа «Лояльный покупатель»
+                            Рассказываем и показываем
                         </h3>
                         <span class="why-us__mobile-bottom-span">
-                            Дарим скидку 10% при 100% оплате земельного участка в любом из наших коттеджных поселков
+                            Наши специалисты в удобное для вас время проведут экскурсии по коттеджным поселкам компании «Навигатор», расскажут и покажут все преимущества жизни за городом в красивых и благоустроенных поселках.
                         </span>
                     </div>
-                    <img class="why-us__mobile-bottom-img" src="./img/discount.png" alt="">
+                    <img class="why-us__mobile-bottom-img" src="./img/eye.png" alt="">
                 </div>
                 <div class="why-us__mobile-bottom-card">
                     <div class="why-us__mobile-bottom-text">
                         <h3 class="why-us__mobile-bottom-heading">
-                            Программа «Лояльный покупатель»
+                            Сопровождение сделки юристом
                         </h3>
                         <span class="why-us__mobile-bottom-span">
-                            Дарим скидку 10% при 100% оплате земельного участка в любом из наших коттеджных поселков
+                            Ведущий юрисконсульт окажет полный спектр услуг – от оформления договора купли-продажи до сдачи документов на государственную регистрацию.
                         </span>
                     </div>
-                    <img class="why-us__mobile-bottom-img" src="./img/discount.png" alt="">
+                    <img class="why-us__mobile-bottom-img" src="./img/bag.png" alt="">
+                </div>
+
+                <div class="why-us__mobile-bottom-card">
+                    <div class="why-us__mobile-bottom-text">
+                        <h3 class="why-us__mobile-bottom-heading">
+                            Поможем с выбором
+                        </h3>
+                        <span class="why-us__mobile-bottom-span">
+                            Купить земельный участок в Тюмени под ИЖС очень просто: мы всегда предложим оптимальный вариант с учетом ваших пожеланий и представлений!
+                        </span>
+                    </div>
+                    <img class="why-us__mobile-bottom-img" src="./img/choice.png" alt="">
                 </div>
             </div>
 
@@ -1380,14 +1564,14 @@
                     </div>
                     <div class="slider-card__content news__card-content">
                         <h3 class="news__card-heading">
-                            asdfasdfsdafsadfsadfsadfsaf
+                            asdfasd
                         </h3>
                         <div class="slider-card__content-description">
-                            asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+                            asdfasdfasdf
                         </div>
                     </div>
                     <div class="slider-card__footer news__footer">
-                        <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
+                        <a class="news__footer-link" href="">asfasdfasf</a>
                         <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
@@ -1400,14 +1584,52 @@
                     </div>
                     <div class="slider-card__content news__card-content">
                         <h3 class="news__card-heading">
-                            asdfasdfsdafsadfsadfsadfsaf
+                            asdfasd
                         </h3>
                         <div class="slider-card__content-description">
-                            asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+                            asdfasdfasdf
                         </div>
                     </div>
                     <div class="slider-card__footer news__footer">
-                        <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
+                        <a class="news__footer-link" href="">asfasdfasf</a>
+                        <span class="news__footer-span">4.03.2019</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
+                    </div>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            asdfasd
+                        </h3>
+                        <div class="slider-card__content-description">
+                            asdfasdfasdf
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">asfasdfasf</a>
+                        <span class="news__footer-span">4.03.2019</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="slider-card">
+                    <div class="slider-card__header news__card-header">
+                        
+                    </div>
+                    <div class="slider-card__content news__card-content">
+                        <h3 class="news__card-heading">
+                            asdfasd
+                        </h3>
+                        <div class="slider-card__content-description">
+                            asdfasdfasdf
+                        </div>
+                    </div>
+                    <div class="slider-card__footer news__footer">
+                        <a class="news__footer-link" href="">asfasdfasf</a>
                         <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
@@ -1420,58 +1642,21 @@
                     </div>
                     <div class="slider-card__content news__card-content">
                         <h3 class="news__card-heading">
-                            asdfasdfsdafsadfsadfsadfsaf
+                            asdfasd
                         </h3>
                         <div class="slider-card__content-description">
-                            asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+                            asdfasdfasdf
                         </div>
                     </div>
                     <div class="slider-card__footer news__footer">
-                        <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
+                        <a class="news__footer-link" href="">asfasdfasf</a>
                         <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <div class="slider-card">
-                    <div class="slider-card__header news__card-header">
-                        
-                    </div>
-                    <div class="slider-card__content news__card-content">
-                        <h3 class="news__card-heading">
-                            asdfasdfsdafsadfsadfsadfsaf
-                        </h3>
-                        <div class="slider-card__content-description">
-                            asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
-                        </div>
-                    </div>
-                    <div class="slider-card__footer news__footer">
-                        <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
-                        <span class="news__footer-span">4.03.2019</span>
-                    </div>
-                </div>
-            </div>
+            
 
-            <div>
-                <div class="slider-card">
-                    <div class="slider-card__header news__card-header">
-                        
-                    </div>
-                    <div class="slider-card__content news__card-content">
-                        <h3 class="news__card-heading">
-                            asdfasdfsdafsadfsadfsadfsaf
-                        </h3>
-                        <div class="slider-card__content-description">
-                            asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
-                        </div>
-                    </div>
-                    <div class="slider-card__footer news__footer">
-                        <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
-                        <span class="news__footer-span">4.03.2019</span>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="slider-cards news__useful-topics slider-topics" data-class="topics">
             <div>
@@ -1481,14 +1666,14 @@
                     </div>
                     <div class="slider-card__content news__card-content">
                         <h3 class="news__card-heading">
-                                useful TOPICS
+                            useful TOPICS
                         </h3>
                         <div class="slider-card__content-description">
-                            asdfasdfasdfasdfsfdsafsdafsfsdfafasfdasf
+                            asdfasdfasdfasdf
                         </div>
                     </div>
                     <div class="slider-card__footer news__footer">
-                        <a class="news__footer-link" href="">asfasdfasf sadfasdfasfasдаffasdfasfasdлее</a>
+                        <a class="news__footer-link" href="">asfasdfasf</a>
                         <span class="news__footer-span">4.03.2019</span>
                     </div>
                 </div>
@@ -1501,7 +1686,7 @@
                     </div>
                     <div class="slider-card__content news__card-content">
                         <h3 class="news__card-heading">
-                            Итоги зимнего праздника в «Альпийской долине»
+                            useful TOPICS
                         </h3>
                         <div class="slider-card__content-description">
                             Вот и наступила Масленичная неделя — праздник, справедливо считающийся одним из самых «кулинарных» праздников

@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     /* padding: 0 50px; */
+    overflow: hidden;
 }
 
 button {
@@ -139,25 +140,41 @@ a {
 
 .mobile-menu {
     z-index: -1;
-    position: absolute;
     opacity: 0;
-    right: -100%;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(320px);
     background-color: #fff;
-    width: 60%;
-    height: 101%;
-    justify-self: flex-end;
     transition: .5s;
-    display: none;
-    flex-direction: column;
+
+    padding: 17px 20px 20px 33px;
 }
 
+.mobile-menu__phone {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2983D4;
+}
 
-.mobile-menu__cross {
-    width: 20px;
-    height: 20px;
+.mobile-menu__phone p {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.mobile-menu__cross-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
     background: #6BBD45;
-    border-radius: 4px 0 !important;
+    margin-left: auto;
 }
+
 
 
 
@@ -836,6 +853,7 @@ a {
     width: unset;
     bottom: 20px;
     left: 20px;
+    margin-top: -33px;
 }
 
 
@@ -854,7 +872,7 @@ a {
     grid-gap: 15px;
     width: 100%;
     max-height: 500px;
-    
+
     grid-template-rows: 1fr 1.3fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     color: #392424;
@@ -919,6 +937,7 @@ a {
     box-sizing: border-box;
     border-radius: 3px;
     grid-column-end: span 2;
+    height: 183px;
 }
 
 .about-company__dots-containter {
@@ -930,6 +949,7 @@ a {
 
 
 .about-company__content-element_third {
+    height: 184px;
     background-color: #2983D4;
     border-radius: 3px;
 }
@@ -951,6 +971,7 @@ a {
     background: #7EC95C;
     border-radius: 3px;
     grid-column-end: span 2;
+    height: 123px;
 }
 
 
@@ -965,8 +986,6 @@ a {
     bottom: 35px;
 }
 
-.about-company .slick-arrow {
-}
 
 
 .about-company__content-element.second h4{
@@ -982,7 +1001,6 @@ a {
     font-size: 14px;
     line-height: 19px;
 }
-
 
 .about-company__content-element:not(:first-child) {
     padding: 30px;
@@ -1597,6 +1615,14 @@ a {
 
 .why-us__slider-navigation {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.why-us__slider-button {
+    height: 50px;
+    width: 250px;
 }
 
 .why-us__arrows-container {
@@ -1665,8 +1691,25 @@ a {
 
 
 .buy-place {
+    margin-top: 150px;
     width: 66%;
     max-width: 1211px;
+    
+}
+
+.buy-place__step {
+    width: 25%;
+    position: relative;
+    margin-right: 20px;
+}
+
+.buy-place__step-heading {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    height: 1em;
+    margin-top: 15px;
+    color: #675A54;
 }
 
 .buy-place__heading{
@@ -1681,15 +1724,19 @@ a {
 .steps__wrapper {
     margin-top: 50px;
     display: none;
+    position: relative;
+
 }
 
 .steps__wrapper.active {
     display: block;
 }
 
-.steps {
-    display: flex;
-    align-items: center;
+
+
+.buy-place__steps {
+    display: none;
+    /* align-items: center; */
     position: relative;
     width: 100%;
     font-weight: 400;
@@ -1698,14 +1745,33 @@ a {
     color: #392424;
 }
 
+.buy-place__steps.active {
+    display: flex;
+}
 
+.buy-place__installment, .buy-place__mortgage {
+    display: none;
+}
 
+.buy-place__more-info {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+}
 
-.step {
-    width: 25%;
-    position: relative;
+.buy-place__more-info, 
+.buy-place__mortgage-info,
+.buy-place__calculator-span {
+    color: #2983D4;
+}
+
+.buy-place__mortgage-info {
     margin-right: 20px;
 }
+
 
 
 .step__number {
@@ -1738,7 +1804,7 @@ a {
 
 .step__description {
     color: #392424;
-    margin-top: 50px;
+    margin-top: 15px;
     line-height: 19px;
     font-size: 14px;
     height: 36px;
@@ -2706,6 +2772,11 @@ a.page-footer__location-content-link{
 
     /* About company */
 
+    .about-company .slick-dots {
+        position: static !important;
+    }
+
+
     .about-company__heading {
         font-size: 22px;
         line-height: 40px;
@@ -2784,6 +2855,7 @@ a.page-footer__location-content-link{
     /* Buy place */
 
     .buy-place {
+        margin-top: 0;
         width: 100%;
     }
 
@@ -2803,17 +2875,37 @@ a.page-footer__location-content-link{
         
     }
 
-    .buy-place__steps {
-        flex-direction: column;
-    }
-
     .buy-place__step {
-        width: 100%;
+        margin-right: 0px;
+        width: unset;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
+    }
+
+    .buy-place__steps {
+        display: none;
+        flex-direction: column;
+        width: calc(90% - 10px);
+        align-items: center;
+        margin: 0 auto 10px;
+    }
+
+    .buy-place__more-info {
+        display: none;
+    }
+
+    .buy-place__installment, 
+    .buy-place__mortgage {
+        flex-direction: column;
+    }
+
+    .logo__wrapper {
+
+    }
+
+    .active {
+        display: flex;
     }
 
     .step__description {
@@ -2838,6 +2930,10 @@ a.page-footer__location-content-link{
 
 
     /* Get appointment */
+
+    .get-appointment {
+        margin-top: 75px;
+    }
 
     .get-appointment__form-wrapper {
         width: calc(90% - 10px);
@@ -2959,9 +3055,18 @@ a.page-footer__location-content-link{
         height: 475px;
     }
 
+    .why-us__mobile-plates .slick-dots {
+        display: none !important;
+    }
+
     .why-us__mobile-bottom-card {
+        width: 280px;
         border-radius: 3px;
         padding: 20px;
+    }
+
+    .slick-dots li button:before {
+        font-size: 13px !important;
     }
 
 
@@ -2974,7 +3079,7 @@ a.page-footer__location-content-link{
 
     .why-us__mobile-bottom-cards .slick-dots {
         /* margin: 150% 0 0 70px; */
-        bottom: -100px;
+        bottom: -90px;
     }
 
     .why-us__mobile-bottom-button {
@@ -3023,6 +3128,7 @@ a.page-footer__location-content-link{
         padding: 0 10px !important;
     }
      */
+
 
 
 
@@ -3121,15 +3227,14 @@ a.page-footer__location-content-link{
         width: calc(90% - 10px);
     }
 
-    .news__slick-slider {
+    .news__slick-slider,
+    .news__residents-stories,
+    .news__useful-topics {
         width: calc(90% - 10px);
         margin: 20px auto 0;
     }
 
-    /* .news .slick-list {
-        width: 100%;
-        padding: 0 30px 0 0;
-    } */
+
 
 
 

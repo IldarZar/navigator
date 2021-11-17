@@ -2,18 +2,6 @@ $( document ).ready(function() {
 
 $('.phone').mask('+7 (000) 000-0000');
 
-// let phone;
-
-// $(document).click(function (e) {
-//     if ($(e.target).val().length <= 2 && $(e.target).is(".phone")) {
-//         phone = e.target;
-//         $(phone).val("+7");
-//     }
-//     else if (!$(e.target).is(".phone") && $(phone).val().length <= 2) {
-//         $(phone).val("");
-//     }
-// })
-
 
 
 
@@ -92,87 +80,22 @@ $('.territories__list').slick({
 });
 
 
+$('.buy-place__tabs-navigation').click(function(e) {
 
+    let dataClass = $(e.target).attr("data-class");
+    let steps = $(".buy-place__steps-wrapper");
 
+    $(steps).children().each(function(index){
+        $($(steps).children()[index]).css({
+            display: "none"
+        })
+    })
 
-// $('.news__slick-slider').slick({
-//     infinite: true,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     arrows: true,
-//     dots: true,
-//     appendDots: ".news__arrow-slider",
-//     appendArrows: ".news__arrows-container",
-//     prevArrow: prevArrow,
-//     nextArrow: nextArrow,
-//     responsive: [
-//         {
-//         breakpoint: 1211,
-//         settings: {
-//             slidesToShow: 2,
-//             slidesToScroll: 1,
-//             infinite: true,
-//         }
-//         },
-//         {
-//         breakpoint: 600,
-//         settings: {
-//             slidesToShow: 1,
-//             slidesToScroll: 1
-//         }
-//         }
-//     ]
-// });
+    $(`.buy-place__${dataClass}`).css({
+        display: "flex"
+    })
 
-
-
-
-// // Блок News
-// // При нажатии на кнопку "Истории жителей" происходит: 
-// $(".news__tab-residents-stories").click(function(e) {
-
-//     // показ slick-слайдера с историями жителей
-//     $(".news__residents-stories").css({
-//         display: "block"
-//     })
-
-
-//     // скрытие slick-слайдера с новостями, полезными статьями
-//     $('.news__slick-slider, .news__useful-topics').css({
-//         display: "none"
-//     })
-    
-
-//     $('.news__residents-stories').slick({
-//         infinite: true,
-//         slidesToShow: 3,
-//         slidesToScroll: 1,
-//         arrows: true,
-//         dots: true,
-//         appendDots: ".useful-topics__arrow-slider",
-//         appendArrows: ".useful-topics__arrows-container",
-//         prevArrow: '<div class="arrow-slider__arrow_left"><svg width="22" height="24" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.939341 10.9393C0.353554 11.5251 0.353554 12.4749 0.939341 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939341 10.9393ZM22 10.5L2 10.5V13.5L22 13.5V10.5Z" fill="#D1D1D1"></path></svg></div>',
-//         nextArrow: '<div class="arrow-slider__arrow_right"><svg width="22" height="24" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.0607 13.0607C21.6464 12.4749 21.6464 11.5251 21.0607 10.9393L11.5147 1.3934C10.9289 0.807611 9.97919 0.807611 9.3934 1.3934C8.80761 1.97919 8.80761 2.92893 9.3934 3.51472L17.8787 12L9.3934 20.4853C8.80761 21.0711 8.80761 22.0208 9.3934 22.6066C9.97919 23.1924 10.9289 23.1924 11.5147 22.6066L21.0607 13.0607ZM0 13.5L20 13.5V10.5L0 10.5L0 13.5Z" fill="#D1D1D1"></path></svg></div>',
-//         responsive: [
-//             {
-//             breakpoint: 1211,
-//             settings: {
-//                 slidesToShow: 2,
-//                 slidesToScroll: 1,
-//                 infinite: true,
-//             }
-//             },
-//             {
-//             breakpoint: 600,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1
-//             }
-//             }
-//         ]
-//     });
-// });
-
+});
 
 
 
@@ -322,10 +245,40 @@ $(".why-us__mobile-bottom-cards, .why-us__mobile-plates, .about-company__mobile-
 
 
 // Кнопка меню в мобильной версии 
-$(".page-header__menu").click(function() {
-    $(".shadow").css({opacity: ".5", "z-index": "40"});
-    $(".mobile-menu").css({opacity: "1", "z-index": "41", right: "0"})
+$('.page-header__menu').click(function() {
+
+    let mobileMenu = $('.mobile-menu');
+    let shadow = $('.shadow');
+
+
+
+    $(shadow).css({opacity: ".5", "z-index": "40"});
+    $(mobileMenu).css({display: "block", opacity: "1", "z-index": "41", transform: "translateX(0px)"});
+ 
+
 });
+
+
+// Кнопка закрытия меню в мобильной версии
+
+$('.mobile-menu__cross-wrapper').click(function() {
+
+    let mobileMenu = $('.mobile-menu');
+    let shadow = $('.shadow');
+
+    $(shadow).css({
+        opacity: 0,
+        "z-index": "-1"
+    })
+
+    $(mobileMenu).css({
+        transform: "translateX(320px)",
+        opacity: 0
+    })
+
+})
+
+
 
 
 // Форма для обратного звонка
@@ -346,7 +299,7 @@ $(".call-back__cross").click(function() {
 
 $(".territories__list-button").click(function () {
     $(".territories__list").css({display: "block"});
-    $(".territories__arrow-slider").css({display: "block"});
+    $(".territories__arrow-slider").css({display: "flex"});
     $(".territories__map-wrapper").css({display: "none"});
 })
 
@@ -405,7 +358,6 @@ for (let i = 0; i < $(".green-background").length; i++) {
 
 $(".tabs-navigation__tab").click(function(e) {
 
-    console.log(12333333)
     let target = e.target;
 
     if (e.target.localName == "span") {
