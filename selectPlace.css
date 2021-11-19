@@ -44,6 +44,89 @@ a:visited {
 
 
 
+
+
+
+
+
+
+
+.shadow {
+    position: absolute;
+    transition: .5s;
+    z-index: -1;
+    opacity: 0;
+    background-color: black;
+    height: 101%;
+    width: 100%;
+
+}
+
+.mobile-menu {
+    z-index: -1;
+    opacity: 0;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(320px);
+    background-color: #fff;
+    transition: .5s;
+
+    padding: 17px 20px 20px 33px;
+}
+
+.mobile-menu__phone {
+    display: block;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2983D4;
+    margin-bottom: 26px;
+}
+
+.mobile-menu__phone p {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.mobile-menu__cross-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    background: #6BBD45;
+    margin-left: auto;
+    margin-bottom: 16px;
+}
+
+
+.mobile-menu__nav-elem {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #675A54;
+    margin-bottom: 26px;
+}
+
+.mobile-menu__social-media {
+    width: 70%;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-menu__button {
+    width: 100%;
+    height: 50px;
+}
+
+
+
+
 /* Green button */
 
 .green-button {
@@ -435,7 +518,13 @@ a:visited {
     margin-right: 30px;
     font-size: 16px;
     line-height: 22px;
-    color: #0068B1;
+    color: #2983D4;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.page-header__phone:hover {
+    color: #2469A7;
 }
 
 .page-header__phone p {
@@ -725,13 +814,13 @@ a:visited {
 
 .select-place__cost {
     height: 100%;
-    width: 40%;
+    width: 39%;
 }
 
 .select-place__size {
     position: relative;
     height: 100%;
-    width: 40%;
+    width: 39%;
 }
 
 
@@ -1818,7 +1907,14 @@ a.page-footer__location-content-link{
     .table__card-button {
         width: 100%;
         height: 100%;
+        transition: .5s;
     }
+
+    .table__card-button:focus {
+        background-color: #6BBD45;
+        color: white;
+    }
+
 
     .table__sort-parameter {
         width: 100%;

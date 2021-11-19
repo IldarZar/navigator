@@ -8,8 +8,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 0 50px; */
-    overflow: hidden;
 }
 
 button {
@@ -123,6 +121,7 @@ a {
     top: 25px;
     width: 14px;
     height: 14px;
+    cursor: pointer;
 }
 
 /* Mobile menu */
@@ -154,10 +153,12 @@ a {
 }
 
 .mobile-menu__phone {
+    display: block;
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
     color: #2983D4;
+    margin-bottom: 26px;
 }
 
 .mobile-menu__phone p {
@@ -173,8 +174,30 @@ a {
     height: 37px;
     background: #6BBD45;
     margin-left: auto;
+    margin-bottom: 16px;
 }
 
+
+.mobile-menu__nav-elem {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #675A54;
+    margin-bottom: 26px;
+}
+
+.mobile-menu__social-media {
+    width: 70%;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-menu__button {
+    width: 100%;
+    height: 50px;
+}
 
 
 
@@ -202,6 +225,13 @@ a {
     width: 216px;
     height: 50px;
 }
+
+
+
+
+
+
+
 
 
 
@@ -552,8 +582,13 @@ a {
     margin-right: 30px;
     font-size: 16px;
     line-height: 22px;
-    color: #0068B1;
+    color: #2983D4;
     cursor: pointer;
+    transition: .5s;
+}
+
+.page-header__phone:hover {
+    color: #2469A7;
 }
 
 .page-header__phone p {
@@ -1106,7 +1141,7 @@ a {
 .territories__map-wrapper {
     display: none;
     margin-bottom: 30px;
-    height: 445px;
+    height: 500px;
 }
 
 
@@ -1235,6 +1270,14 @@ a {
 
 .select-place .slider-values {
     width: 80%;
+}
+
+.select-place__settings-button-wrapper {
+    order: 0;
+}
+
+.select-place__settings {
+    order: 1;
 }
 
 .top-line__wrapper {
@@ -1650,6 +1693,11 @@ a {
 
 .why-us__text-wrapper {
     padding: 10px;
+}
+
+.why-us__slider-content > img { 
+ width: 193px;
+ height: 177px;
 }
 
 .why-us__slider-content {
@@ -2760,7 +2808,8 @@ a.page-footer__location-content-link{
     }
 
     .territories__map {
-        width: 100% !important;
+        /* width: 100% !important;
+        height: 500px !important; */
     }
 
     

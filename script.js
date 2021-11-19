@@ -5,42 +5,6 @@ $('.phone').mask('+7 (000) 000-0000');
 
 
 
-// Создаем обработчик загрузки страницы: 
-DG.autoload(function() { 
-    // Создаем объект карты, связанный с контейнером: 
-    var myMap = new DG.Map('myMapId'); 
-    // Устанавливаем центр карты, и коэффициент масштабирования: 
-    myMap.setCenter(new DG.GeoPoint(82.927810142519,55.028936234826), 15); 
-    // Добавляем элемент управления коэффициентом масштабирования: 
-    myMap.controls.add(new DG.Controls.Zoom()); 
-
-    // Создаем балун:
-    var myBalloon = new DG.Balloons.Common({
-        // Местоположение на которое указывает балун: 
-         geoPoint: new DG.GeoPoint(82.927810142519,55.028936234826),
-         // Устанавливаем текст, который будет отображатся при открытии балуна:
-         contentHtml: 'Привет!<br>Вы кликнули по мне :)'
-    });
-    // Создаем маркер:
-    var myMarker = new DG.Markers.Common({
-         // Местоположение на которое указывает маркер:
-         geoPoint: new DG.GeoPoint(82.927810142519,55.028936234826),
-         // Функция, вызываемая при клике по маркеру
-         clickCallback: function() {
-            if (! myMap.balloons.getDefaultGroup().contains(myBalloon)) {
-                // Если балун еще не был добавлен на карту, добавляем его:
-                 myMap.balloons.add(myBalloon);
-             } else {
-                 // Показываем уже ранее добавленный на карту балун
-                 myBalloon.show();
-             }
-        }
-    });
-    // Добавить маркер на карту:
-    myMap.markers.add(myMarker);
-}); 
-
-
 const prevArrow = '<div class="arrow-slider__arrow_left"><svg width="22" height="24" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.939341 10.9393C0.353554 11.5251 0.353554 12.4749 0.939341 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939341 10.9393ZM22 10.5L2 10.5V13.5L22 13.5V10.5Z" fill="#D1D1D1"></path></svg></div>';
 const nextArrow = '<div class="arrow-slider__arrow_right"><svg width="22" height="24" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.0607 13.0607C21.6464 12.4749 21.6464 11.5251 21.0607 10.9393L11.5147 1.3934C10.9289 0.807611 9.97919 0.807611 9.3934 1.3934C8.80761 1.97919 8.80761 2.92893 9.3934 3.51472L17.8787 12L9.3934 20.4853C8.80761 21.0711 8.80761 22.0208 9.3934 22.6066C9.97919 23.1924 10.9289 23.1924 11.5147 22.6066L21.0607 13.0607ZM0 13.5L20 13.5V10.5L0 10.5L0 13.5Z" fill="#D1D1D1"></path></svg></div>';
 
@@ -143,8 +107,6 @@ f.each(function (index) {
 $(".news__residents-stories, .news__useful-topics").css({
     display: "none"
 })
-
-
 
 
 
@@ -303,11 +265,67 @@ $(".territories__list-button").click(function () {
     $(".territories__map-wrapper").css({display: "none"});
 })
 
-
+let map;
 $(".territories__map-button").click(function () {
     $(".territories__list").css({display: "none"});
     $(".territories__arrow-slider").css({display: "none"});
     $(".territories__map-wrapper").css({display: "block"});
+
+
+    if ($("#map").html() == "") {
+        DG.then(function() {
+            var myIcon,
+            myDivIcon;
+            
+            map = DG.map('map', {
+                center: [57.07843442145884, 65.05290403834859],
+                zoom: 11
+            });
+
+
+            myOtherIcon = 
+            
+
+            eseninoIcon = DG.icon({
+                iconUrl: "https://navigator-tmn.ru/upload/iblock/f80/esenino.png",
+                iconSize: [76, 70]
+            })
+            
+            ushakovoIcon = DG.icon({
+                iconUrl: 'https://navigator-tmn.ru/upload/iblock/f78/ushakovo.png',
+                iconSize: [76, 70]
+            });
+
+            elki = DG.icon({
+                iconUrl: "https://navigator-tmn.ru/upload/iblock/9ce/elki.png",
+                iconSize: [76, 70]
+            })
+
+            kuliga = DG.icon({
+                iconUrl: "https://navigator-tmn.ru/upload/iblock/469/alpine.png",
+                iconSize: [76, 70]
+            })
+
+
+            
+            DG.marker([57.09067664776022, 65.0541361046088], {
+                icon: eseninoIcon
+            }).addTo(map);
+
+            DG.marker([57.08959485317398,65.13909511615857], {
+                icon: ushakovoIcon
+            }).addTo(map);
+
+            DG.marker([57.07550982094455,65.16954931946299], {
+                icon: elki
+            }).addTo(map);
+
+            DG.marker([57.23505191036543,65.0840187524868], {
+                icon: kuliga
+            }).addTo(map);
+
+        });
+    }
 })
 
 
@@ -837,27 +855,60 @@ function simpleTemplating(data) {
 }
 
 
-$('.select-place__settings-button-wrapper').click(function() {
+$('.select-place__settings-button-wrapper').click(function(e) {
 
-    if ($(".select-place__settings").hasClass("hide")) {
+    e.preventDefault();
+
+    let settingsList = $(this).next();
+    let settingsButton = $(this);
+    let button = $(this).next().next();
+
+
+    if ($(settingsList).hasClass("hide") ) {
         $(".select-place__settings").removeClass("hide")
-        const settings = [
-            $(this).next(),         // settings
-            $(this),                // settingsButton 
-            $(this).next().next()   // button
-        ]
+
+    
         
-        settings.forEach((el, i) => {
-            $(el).css({
-                order: i
+
+        const settings = [
+            settingsList,
+            settingsButton,  
+            button
+        ]
+
+        console.log($(window).width() <= '320')
+
+        if ($(window).width() <= '320') {
+            settings.forEach((el, i) => {
+                $(el).css({
+                    order: i
+                })
             })
+        }
 
-
+        $(this).children(":first").html("Скрыть параметры")
+        $(this).children(":nth-child(2)").css({
+            transform: "rotate(180deg)"
         })
+
     } else {
-        $(".select-place__settings").addClass("hide")
+        $(settingsList).addClass("hide")
+
+        $(this).children(":first").html("Ещё параметры")
+        $(this).children(":nth-child(2)").css({
+            transform: "rotate(0deg)"
+        })
     }
 
+
+
+    
+
+})
+
+
+$(".select-place__button").click(function(e) {
+    e.preventDefault();
 })
 
 
